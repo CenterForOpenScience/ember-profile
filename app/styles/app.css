@@ -1,0 +1,230 @@
+/*										*/
+/*		Navigation Menu Formatting		*/
+/*										*/
+
+ul, menu, dir {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+@media (min-width: 768px)
+.navbar-nav {
+    float: left;
+    margin: 0;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #101010;
+}
+
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+    max-height: 340px;
+}
+
+.navbar-brand>img {
+    display: block;
+}
+
+.osf-navbar-logo {
+    float: left;
+    margin-right: 8px;
+    background-size: 100%;
+    width: 27px;
+    height: 27px;
+}
+
+img {
+    vertical-align: middle;
+	border: 0;
+}
+
+@media (min-width: 1200px)
+.container {
+    width: 1170px;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px)
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+@media (min-width: 768px)
+.navbar-header {
+    float: left;
+}
+
+.navbar-brand {
+    float: left;
+    padding: 12.5px 15px;
+    font-size: 18px;
+    line-height: 25px;
+    height: 50px;
+}
+
+.navbar-inverse {
+    background-color: #214762;
+    background-image: linear-gradient(to bottom, rgba(60, 60, 60, 0.5) 0%, rgba(34, 34, 34, 0.5) 100%);
+    background-repeat: repeat-x;
+    border-color: rgba(8, 8, 8, 0.5);
+}
+
+.navbar {
+    min-height: 50px;
+    margin-bottom: 25px;
+	border: 1px solid transparent;
+}
+
+.navbar-fixed-top {
+    border-width: 0 0 1px;
+}
+
+@media (min-width: 768px)
+.navbar-fixed-bottom, .navbar-fixed-top {
+    border-radius: 0;
+}
+
+.navbar-fixed-bottom, .navbar-fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+#navbarScope {
+    top: 0px;
+    transition: top 0.3s ease-in-out;
+}
+
+#navbarScope a {
+    color: #ffffff;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 768px)
+.navbar-brand {
+    margin-left: 0 !important;
+    padding-left: 0;
+}
+
+nav {
+    font: inherit;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*								*/
+/*		Body Formatting			*/
+/*								*/
+
+a {
+    cursor: pointer;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+p, a, span, em, td {
+    word-break: break-word;
+    word-wrap: break-word;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+
+body {
+    padding-top: 50px;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+	
+    min-height: 700px;
+    background: #C5D6E6 url('https://osf.io/static/img/bg6.jpg') top center repeat-y;
+    background-size: cover;
+}
+
+#banner-container {
+	position: relative;
+	left: 0;
+	top: 0;
+	height: 300px;
+	overflow: hidden;
+    background: url('http://www.rothforestryllc.com/wp-content/uploads/2012/08/banner-forest.jpg') no-repeat;
+    background-size: cover;
+}
+#image-container {
+	position: relative;
+}
+.banner-img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.banner-profile {
+	position: absolute;
+	left: 0;
+	top: 200px;
+	right: 0;
+	bottom: 0;
+	display: block;
+	margin: auto;
+	width: 200px;
+	height: 200px;
+	border: 5px solid white;
+	border-radius: 50%;
+	margin-top: 0px;
+}
+#body-background {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	background: white;
+	width: 70%;
+	height: 90vh;
+	margin-top: 30px;
+    box-shadow: 1px 1px 1px 1px grey;
+}
+#menu-list {
+	list-style-type: none;
+	padding: 0;
+}
+#menu-list li {
+	display: inline;
+}
+#menu-list li a {
+	background-color: black;
+	color: white;
+	padding: 10px 20px;
+	text-decoration: none;
+	border-radius: 4px 4px 0 0;
+}
+#menu-list li a:hover {
+	background-color: orange;
+}
+.right-list {
+	float: right;
+}
+.left-list {
+	float: left;
+}
