@@ -6,15 +6,15 @@
 	<div id="links-container">
 		<ul id="menu-list">
 			<li class="col-md-5">
-				<a class="col-md-6">About</a>
-				<a class="col-md-6">Projects</a>
+				{{#link-to "profile.about" class="col-md-6"}}About{{/link-to}}
+				{{#link-to "profile.projects" class="col-md-6"}}Projects{{/link-to}}
 			</li>
 			<li class="col-md-2">
 				<img src="https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg"/>
 			</li>
 			<li class="col-md-5">
-				<a class="col-md-6">Contributors</a>
-				<a class="col-md-6">Activity</a>
+				{{#link-to "profile.collaborators" class="col-md-6"}}Collaborators{{/link-to}}
+				{{#link-to "profile.activity" class="col-md-6"}}Activity{{/link-to}}
 			</li>
 		</ul>
 	</div>
