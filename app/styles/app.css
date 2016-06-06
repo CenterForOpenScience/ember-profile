@@ -184,7 +184,7 @@ body {
   left: 0;
   top: 0;
   height: 300px;
-  background: url('http://www.rothforestryllc.com/wp-content/uploads/2012/08/banner-forest.jpg') no-repeat;
+  background: #166595 url("https://osf.io/static/img/front-page/bg-web.png") no-repeat center top;
   background-size: cover;
 }
 
@@ -237,17 +237,18 @@ body {
   z-index: 3;
 }
 
-#menu-list li img {
+#profile-picture {
   margin-top: -60%;
   margin-left: -10%;
   width: 120%;
-  background-color: white;
   border: 5px solid white;
   border-radius: 50%;
+  background: white url("https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg") no-repeat center;
+  background-size: cover;
 }
 
-#menu-list li img:before {
+#profile-picture:before {
   content: '';
   display: block;
-  margin-top: 120%;
+  margin-top: 100%;
 }
