@@ -21,8 +21,8 @@
       <h5 class="col-md-6" id="editprofile">Edit your profile</h5>
     </div>
     <div id="name">
-      <h1>John Doe</h1>
-      <h4>Charlottesville, VA  |  Developer</h4>
+      <h1>{{model.name}}</h1>
+      <h4>{{model.location}} | {{model.profession}}</h4>
     </div>
     <main>
       {{outlet}}

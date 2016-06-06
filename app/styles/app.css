@@ -19,7 +19,7 @@ footer {
   padding: 70px;
 }
 
-footer:after {
+footer:after, main:after {
   display: block;
   clear: both;
   content: " "
