@@ -1,87 +1,60 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" id="navbarScope" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+              aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand hidden-sm hidden-xs" href="/"><img src="https://osf.io/static/img/cos-white2.png"
+                                                                class="osf-navbar-logo" width="27" alt="COS logo">
+        Open Science Framework</a>
+      <a class="navbar-brand visible-sm visible-xs" href="/"><img src="https://osf.io/static/img/cos-white2.png"
+                                                                  class="osf-navbar-logo" width="27"
+                                                                  alt="COS logo"> OSF</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse navbar-right">
+      <ul class="nav navbar-nav">
+        <li id="osfNavDashboard"><a href="/">Dashboard</a></li>
+        <li id="osfNavMyProjects"><a href="/myprojects/">My Projects</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Browse
+            <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="https://osf.io/explore/activity/">New Projects</a></li>
+            <li><a href="https://osf.io/search/?q=*&amp;filter=registration">Registry</a></li>
+            <li><a href="https://osf.io/meetings/">Meetings</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle nav-user-dropdown" data-toggle="dropdown" role="button"
+             aria-expanded="false"><span class="osf-gravatar"><img
+              src="https://secure.gravatar.com/avatar/119ccf7175af9a2d1a103b8126667068?d=identicon&amp;s=25"
+              alt="User gravatar"> </span> John Doe <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="/profile/"><i class="fa fa-user fa-lg p-r-xs"></i> My Profile</a>
+            </li>
+            <li>
+              <a href="/support/"><i class="fa fa-life-ring fa-lg p-r-xs"></i> Support</a>
+            </li>
+
+            <li>
+              <a href="/settings/"><i class="fa fa-cog fa-lg p-r-xs"></i> Settings</a>
+            </li>
+            <li>
+              <a href="/logout/"><i class="fa fa-sign-out fa-lg p-r-xs"></i> Log out</a>
+            </li>
+
+          </ul>
+        </li>
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div>
 
 
-<body>
-	<nav class="navbar navbar-inverse navbar-fixed-top" id="navbarScope" role="navigation">
-	    <div class="container">
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-	      <!-- ko ifnot: onSearchPage -->
-	      <span class="visible-xs" data-bind="click : toggleSearch, css: searchCSS">
-	          <a class="osf-xs-search pull-right" style="padding-top: 12px">
-	            <span rel="tooltip" data-placement="bottom" title="Search OSF" class="fa fa-search fa-lg fa-inverse"></span>
-	          </a>
-	      </span>
-	      <!-- /ko -->
-	      <a class="navbar-brand hidden-sm hidden-xs" href="/"><img src="https://osf.io/static/img/cos-white2.png" class="osf-navbar-logo" width="27" alt="COS logo"> Open Science Framework</a>
-	      <a class="navbar-brand visible-sm visible-xs" href="/"><img src="https://osf.io/static/img/cos-white2.png" class="osf-navbar-logo" width="27" alt="COS logo"> OSF</a>
-	    </div>
-	    <div id="navbar" class="navbar-collapse collapse navbar-right">
-	      <ul class="nav navbar-nav">
-	            <li id="osfNavDashboard"><a href="/">Dashboard</a></li>
-	            <li id="osfNavMyProjects"><a href="/myprojects/">My Projects</a></li>
-	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Browse <span class="caret"></span></a>
-	          <ul class="dropdown-menu" role="menu">
-	              <li><a href="https://osf.io/explore/activity/">New Projects</a></li>
-	              <li><a href="https://osf.io/search/?q=*&amp;filter=registration">Registry</a></li>
-	              <li><a href="https://osf.io/meetings/">Meetings</a></li>
-	          </ul>
-	        </li>
-
-	        <!-- ko ifnot: onSearchPage -->
-	        <li class="hidden-xs" data-bind="click : toggleSearch, css: searchCSS">
-	            <a class="">
-	                <span rel="tooltip" data-placement="bottom" title="Search OSF" class="fa fa-search fa-lg"></span>
-	            </a>
-	        </li>
-	        <!-- /ko -->
-	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle nav-user-dropdown" data-toggle="dropdown" role="button" aria-expanded="false"><span class="osf-gravatar"><img src="https://secure.gravatar.com/avatar/119ccf7175af9a2d1a103b8126667068?d=identicon&amp;s=25" alt="User gravatar"> </span> John Doe <span class="caret"></span></a>
-	          <ul class="dropdown-menu" role="menu">
-	              <li>
-	                  <a href="/profile/"><i class="fa fa-user fa-lg p-r-xs"></i> My Profile</a>
-	              </li>
-	              <li>
-	                  <a href="/support/"><i class="fa fa-life-ring fa-lg p-r-xs"></i> Support</a>
-	              </li>
-
-	              <li>
-	                  <a href="/settings/"><i class="fa fa-cog fa-lg p-r-xs"></i> Settings</a>
-	              </li>
-	              <li>
-	                  <a href="/logout/"><i class="fa fa-sign-out fa-lg p-r-xs"></i> Log out</a>
-	              </li>
-
-	          </ul>
-	        </li>
-	          </ul>
-	    </div><!--/.navbar-collapse -->
-	    </div>
-
-
-	</nav>
-	<div id="body-background">
-		<div id="image-container">
-			<div id="banner-container">
-			</div>
-			<div id="profile-container">
-				<img class="banner-profile" src="https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg" />
-			</div>
-		</div>
-		<div id="links-container">
-			<ul id="menu-list">
-				<li class="left-list"><a>About</a></li>
-				<li class="left-list"><a>Projects</a></li>
-				<li class="right-list"><a>Contributors</a></li>
-				<li class="right-list"><a>Activity</a></li>
-			</ul>
-		</div>
-	</div>
-</body>
+</nav>
 
 {{outlet}}

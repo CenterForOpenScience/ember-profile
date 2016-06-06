@@ -153,7 +153,6 @@ ul, menu, dir {
   }
 
   body {
-    padding-top: 50px;
     position: relative;
     -webkit-font-smoothing: antialiased;
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -171,7 +170,7 @@ ul, menu, dir {
     left: 0;
     top: 0;
     height: 300px;
-    overflow: hidden;
+    /*overflow: hidden;*/
     background: url('http://www.rothforestryllc.com/wp-content/uploads/2012/08/banner-forest.jpg') no-repeat;
     background-size: cover;
   }
@@ -189,10 +188,10 @@ ul, menu, dir {
     left: 0;
   }
 
-  .banner-profile {
+  /*.banner-profile {
     position: absolute;
     left: 0;
-    top: 200px;
+    top: 220px;
     right: 0;
     bottom: 0;
     display: block;
@@ -202,7 +201,7 @@ ul, menu, dir {
     border: 5px solid white;
     border-radius: 50%;
     margin-top: 0px;
-  }
+  }*/
 
   #body-background {
     margin-left: auto;
@@ -216,31 +215,48 @@ ul, menu, dir {
   }
 
   #menu-list {
-    list-style-type: none;
+    list-style: none;
+    margin: 0;
     padding: 0;
+    /*overflow: hidden;*/
+    height: 4rem;
   }
 
-  #menu-list li {
-    display: inline;
+  #menu-list>li {
+    padding: 0;
+    margin: 0;
+    height: 100%;
   }
 
   #menu-list li a {
+    display: inline-block;
     background-color: black;
+    line-height: 4rem;
+    text-align: center;
     color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 4px 4px 0 0;
   }
 
   #menu-list li a:hover {
     background-color: orange;
+    text-decoration: none;
   }
 
-  .right-list {
-    float: right;
+  #menu-list li:nth-child(2) {
+    position: relative;
+    padding-top: 2rem;
+    z-index: 3;
   }
 
-  .left-list {
-    float: left;
+  #menu-list li img {
+    /*position: absolute;*/
+    /*top: -50%;*/
+    /*left: -50%;*/
+    margin-top: -60%;
+    margin-left: -10%;
+    width: 120%;
+    /*height: 100%;*/
+    border: 5px solid white;
+    border-radius: 50%;
   }
+
 }
