@@ -1,25 +1,23 @@
-<div id="body-background">
-	<div id="image-container">
-		<div id="banner-container">
-		</div>
-	</div>
-	<div id="links-container">
-		<ul id="menu-list">
-			<li class="col-md-5">
-				{{#link-to "profile.about" class="col-md-6"}}About{{/link-to}}
-				{{#link-to "profile.projects" class="col-md-6"}}Projects{{/link-to}}
-			</li>
-			<li class="col-md-2">
-				<img src="https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg"/>
-			</li>
-			<li class="col-md-5">
-				{{#link-to "profile.collaborators" class="col-md-6"}}Collaborators{{/link-to}}
-				{{#link-to "profile.activity" class="col-md-6"}}Activity{{/link-to}}
-			</li>
-		</ul>
-	</div>
-	<main>
-    {{outlet}}
-	</main>
+<div id="body-wrapper">
+  <div id="body-background">
+    <div id="banner"></div>
+    <nav>
+      <ul id="menu-list">
+        <li class="col-md-5">
+          {{#link-to "profile.about" class="col-md-6"}}About{{/link-to}}
+          {{#link-to "profile.projects" class="col-md-6"}}Projects{{/link-to}}
+        </li>
+        <li class="col-md-2">
+          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg"/>
+        </li>
+        <li class="col-md-5">
+          {{#link-to "profile.collaborators" class="col-md-6"}}Collaborators{{/link-to}}
+          {{#link-to "profile.activity" class="col-md-6"}}Activity{{/link-to}}
+        </li>
+      </ul>
+    </nav>
+    <main>
+      {{outlet}}
+    </main>
+  </div>
 </div>
-
