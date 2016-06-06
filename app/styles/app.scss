@@ -115,7 +115,7 @@ main {
 }
 
 #name {
-  margin-top: 8rem;
+  margin-top: 5rem;
   text-align: center;
 }
 
@@ -126,5 +126,23 @@ main {
     &:last-child {
       text-align: right;
     }
+  }
+}
+
+#noindent{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#mailicon {
+  margin-left: 70%;
+  width: 30%;
+  border: 5px solid white;
+  background: white url("https://cdn0.iconfinder.com/data/icons/flat-green-icon-set/512/Mail_Icon_FlatGreen.png") no-repeat center;
+  background-size: cover;
+  &:before {
+    content: '';
+    display: block;
+    margin-top: 100%;
   }
 }
