@@ -257,3 +257,11 @@ body {
   margin-top: 8rem;
   text-align: center;
 }
+
+#selfview>h5 {
+  color: grey;
+}
+
+#editprofile {
+  text-align: right;
+}
