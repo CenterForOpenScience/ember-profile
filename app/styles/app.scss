@@ -1,0 +1,130 @@
+@import 'navbar';
+@import 'variables';
+
+%clear {
+  &:after {
+    display: block;
+    clear: both;
+    content: '';
+  }
+}
+
+footer {
+  @extend %clear;
+  margin: 0;
+  width: 100%;
+  color: #555;
+  background-color: $light;
+  padding: 70px;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    color: $select;
+    cursor: pointer;
+  }
+}
+
+#copyright {
+  padding-top: 30px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+main {
+  @extend %clear;
+}
+
+#banner {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 300px;
+  background: #166595 url("https://osf.io/static/img/front-page/bg-web.png") no-repeat center top;
+  background-size: cover;
+}
+
+#body-wrapper {
+  background: #C5D6E6 url('https://osf.io/static/img/bg6.jpg') top center repeat-y;
+  background-size: cover;
+  padding-bottom: 10vh;
+}
+
+#body-background {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background: white;
+  width: 70vw;
+  min-height: 90vh;
+  margin-top: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 4rem;
+  & > li {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+
+  li {
+    &:nth-child(2) {
+      padding-top: 2rem;
+      z-index: 3;
+    }
+    a {
+      display: inline-block;
+      background-color: $blue;
+      line-height: 4rem;
+      text-align: center;
+      color: white;
+      transition: background-color 0.1s linear;
+      &:hover {
+        background-color: $select;
+        text-decoration: none;
+      }
+      &:active {
+        background-color: darken($select, 10%);
+      }
+      &.active {
+        background-color: $select;
+      }
+    }
+  }
+}
+
+#profile-picture {
+  margin-top: -60%;
+  margin-left: -10%;
+  width: 120%;
+  border: 5px solid white;
+  border-radius: 50%;
+  background: white url("https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg") no-repeat center;
+  background-size: cover;
+  &:before {
+    content: '';
+    display: block;
+    margin-top: 100%;
+  }
+}
+
+#name {
+  margin-top: 8rem;
+  text-align: center;
+}
+
+#selfview {
+  @extend %clear;
+  & > h5 {
+    color: grey;
+    &:last-child {
+      text-align: right;
+    }
+  }
+}
