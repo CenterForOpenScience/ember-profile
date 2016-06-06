@@ -9,11 +9,15 @@ export default Ember.Route.extend({
         join_date: '5-16-2016'
       },
       social: [{
-        name: 'Twitter',
-        link: '/'
+        name: 'johnDoe45',
+        site: 'Twitter',
+        link: '/',
+        icon: 'fa fa-twitter-square'
       }, {
-        name: 'LinkedIn',
-        link: '/'
+        name: 'John Doe',
+        site: 'LinkedIn',
+        link: '/',
+        icon: 'fa fa-linkedin-square'
       }],
       employment: [{
         name: 'Center for Closed Science',
