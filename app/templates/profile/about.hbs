@@ -1,16 +1,28 @@
 <section class="col-md-6">
-  <div>
-    {{#about-personal model=model.personal}}{{/about-personal}}
+  <div class="profile-box">
+    <h1>Personal</h1>
+    <div class="profile-content">
+      {{#about-personal model=model.personal}}{{/about-personal}}
+    </div>
   </div>
-  <div>
-    {{#about-social model=model.social}}{{/about-social}}
+  <div class="profile-box">
+	  <h1>Social</h1>
+	  <div class="profile-content">
+      {{#about-social model=model.social}}{{/about-social}}
+    </div>
   </div>
 </section>
 <section class="col-md-6">
-  <div>
-    {{#about-employment model=model.employment}}{{/about-employment}}
+  <div class="profile-box">
+	  <h1>Employment</h1>
+	  <div class="profile-content">
+      {{#about-employment model=model.employment}}{{/about-employment}}
+    </div>
   </div>
-  <div>
-    {{#about-education model=model.education}}{{/about-education}}
+  <div class="profile-box">
+	  <h1>Education</h1>
+	  <div class="profile-content">
+      {{#about-education model=model.education}}{{/about-education}}
+    </div>
   </div>
 </section>

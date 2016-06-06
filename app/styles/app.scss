@@ -1,3 +1,4 @@
+@import 'bootstrap';
 @import 'navbar';
 @import 'variables';
 
@@ -34,6 +35,12 @@ footer {
 
 main {
   @extend %clear;
+  & > section:first-child {
+    padding-right: 7.5px;
+  }
+  & > section:last-child {
+    padding-left: 7.5px;
+  }
 }
 
 #banner {
@@ -144,5 +151,23 @@ main {
     content: '';
     display: block;
     margin-top: 100%;
+  }
+}
+
+.profile-box {
+  @extend %clear;
+  border: #DDD 1px solid;
+  &:not(last-child) {
+    margin-bottom: 2rem;
+  }
+  & > h1 {
+    padding: 1rem;
+    margin: 0;
+    font-size: 2rem;
+    background-color: #F5F5F5;
+    border-bottom: #DDD 1px solid;
+  }
+  & > .profile-content {
+    padding: 1rem;
   }
 }
