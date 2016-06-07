@@ -195,9 +195,6 @@ main {
   padding-right: 5rem;
 }
 
-.samplespacing {
-  padding-bottom: 2rem;
-}
 
 .collab-box {
   @extend %clear;
@@ -225,4 +222,11 @@ main {
 #collaborators {
   height: 75rem;
   overflow: scroll;
+}
+
+.education-employment {
+  @extend %clear;
+  & > ul {
+    list-style-type: none;
+  }
 }

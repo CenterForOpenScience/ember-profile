@@ -1,17 +1,15 @@
 {{#each model as |employer|}}
-  <h4>{{employer.name}}</h4>
-  <div class="col-md-3 samplespacing">
-    <b>Department:</b>
-    <br>
-    <b>Title:</b>
-    <br>
-    <b>Dates:</b>
-  </div>
-  <div class="col-md-9">
-    {{employer.department}}
-    <br>
-    {{employer.title}}
-    <br>
-    {{employer.dates}}
+  <div class="education-employment">
+    <h4>{{employer.name}}</h4>
+    <ul class="col-md-3">
+      <b><li>Department:</li></b>
+      <b><li>Title:</li></b>
+      <b><li>Dates:</li></b>
+    </ul>
+    <ul class="col-md-9">
+      <li>{{employer.department}}</li>
+      <li>{{employer.title}}</li>
+      <li>{{employer.dates}}</li>
+    </ul>
   </div>
 {{/each}}

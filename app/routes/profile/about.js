@@ -24,6 +24,11 @@ export default Ember.Route.extend({
         department: 'Infrastructure',
         title: 'Developer',
         dates: '5-16-2016 - current'
+      }, {
+        name: 'Willowtree',
+        department: 'Development',
+        title: 'Software Engineer',
+        dates: '4-29-2015 - 5-10-2016'
       }],
       education: [{
         name: 'Ellis\' Ember Education Experiment',

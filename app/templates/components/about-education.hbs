@@ -1,18 +1,15 @@
 {{#each model as |educator|}}
-  <h4>{{educator.name}}</h4>
-
-  <div class="col-md-3 samplespacing">
-    <b>Department:</b>
-    <br>
-    <b>Degree:</b>
-    <br>
-    <b>Dates:</b>
-  </div>
-  <div class="col-md-9">
-    {{educator.department}}
-    <br>
-    {{educator.degree}}
-    <br>
-    {{educator.dates}}
+  <div class="education-employment">
+    <h4>{{educator.name}}</h4>
+    <ul class="col-md-3">
+      <b><li>Department:</li></b>
+      <b><li>Degree:</li></b>
+      <b><li>Dates:</li></b>
+    </ul>
+    <ul class="col-md-9">
+      <li><{{educator.department}}/li>
+      <li><{{educator.degree}}/li>
+      <li>{{educator.dates}}</li>
+    </ul>
   </div>
 {{/each}}
