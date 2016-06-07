@@ -12,12 +12,12 @@ export default Ember.Route.extend({
         name: 'johnDoe45',
         site: 'Twitter',
         link: '/',
-        icon: 'fa fa-twitter-square'
+        icon: 'fa fa-twitter-square fa-3x'
       }, {
         name: 'John Doe',
         site: 'LinkedIn',
         link: '/',
-        icon: 'fa fa-linkedin-square'
+        icon: 'fa fa-linkedin-square fa-3x'
       }],
       employment: [{
         name: 'Center for Open Science',
