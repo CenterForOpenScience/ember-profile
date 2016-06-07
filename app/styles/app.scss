@@ -256,3 +256,20 @@ main {
     list-style-type: none;
   }
 }
+
+.cp-Panel {
+  border: 1px solid #ddd;
+}
+.cp-Panel-toggle {
+  display: block;
+  padding: 1em;
+}
+.cp-Panel-toggle:link {
+  text-decoration: none;
+}
+.cp-Panel-toggle:hover {
+  background-color: whitesmoke;
+}
+.cp-Panel-body-inner {
+  padding: 1em;
+}
