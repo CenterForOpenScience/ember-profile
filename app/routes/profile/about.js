@@ -23,13 +23,13 @@ export default Ember.Route.extend({
         name: 'Center for Open Science',
         department: 'Infrastructure',
         title: 'Developer',
-        dates: 'tomorrow - saturday'
+        dates: '5-16-2016 - current'
       }],
       education: [{
         name: 'Ellis\' Ember Education Experiment',
-        department: 'Learning',
-        degree: '90º',
-        dates: '6/6/16 - 6 June 2016'
+        department: 'College of Ellis',
+        degree: 'Ember Education',
+        dates: '6-6-2016 - 6-7-2016'
       }]
     };
   }
