@@ -20,11 +20,6 @@ export default Ember.Route.extend({
         icon: 'fa fa-linkedin-square'
       }],
       employment: [{
-        name: 'Center for Closed Science',
-        department: 'internets',
-        title: 'pro',
-        dates: 'yesterday - today'
-      }, {
         name: 'Center for Open Science',
         department: 'Infrastructure',
         title: 'Developer',
