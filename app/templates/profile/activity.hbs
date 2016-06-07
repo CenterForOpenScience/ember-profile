@@ -1,1 +1,24 @@
-{{outlet}}
+<section class="col-md-6">
+  <div class="profile-box">
+    <h1>Projects</h1>
+    <div class="profile-content activity-content">
+      {{#activity-projects model=model.projects}}{{/activity-projects}}
+    </div>
+  </div>
+</section>
+<section class="col-md-6">
+  <div class="profile-box">
+	  <h1>Recent Activity</h1>
+	  <div class="profile-content activity-content">
+      {{#activity-recent model=model.recent_activity}}{{/activity-recent}}
+    </div>
+  </div>
+</section>
+<section class="col-md-12">
+  <div class="profile-box">
+    <h1>Activity Chart</h1>
+    <div class="profile-content">
+      {{#activity-visits-plot}}{{/activity-visits-plot}}
+    </div>
+  </div>
+</section>

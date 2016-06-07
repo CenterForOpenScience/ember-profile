@@ -38,7 +38,7 @@ main {
   & > section:first-child {
     padding-right: 7.5px;
   }
-  & > section:last-child {
+  & > section:nth-child(2) {
     padding-left: 7.5px;
   }
 }
@@ -151,6 +151,23 @@ main {
     display: block;
     margin-top: 100%;
   }
+}
+
+.activity-content {
+  height: 359px;
+  overflow: scroll;
+}
+
+.project-stats dd {
+  border-bottom: solid 1px #F1F1F1;
+}
+
+.project-stats dt{
+    white-space: normal;
+}
+
+.spaced-list {
+  margin: 10px 0;
 }
 
 .profile-box {
