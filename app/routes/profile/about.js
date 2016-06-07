@@ -31,8 +31,8 @@ export default Ember.Route.extend({
         dates: '4-29-2015 - 5-10-2016'
       }],
       education: [{
-        name: 'Ellis\' Ember Education Experiment',
-        department: 'College of Ellis',
+        name: 'College',
+        department: 'Science',
         degree: 'Ember Education',
         dates: '6-6-2016 - 6-7-2016'
       }]

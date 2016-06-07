@@ -1,0 +1,5 @@
+<ul>
+{{#each model as |project index|}}
+  <li {{action "select" project}}>{{project.name}}</li>
+{{/each}}
+</ul>

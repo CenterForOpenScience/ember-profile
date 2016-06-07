@@ -175,7 +175,7 @@ main {
 .profile-box {
   @extend %clear;
   border: #DDD 1px solid;
-  &:not(last-child) {
+  &:not(:last-child) {
     margin-bottom: 2rem;
   }
   & > h1 {
@@ -187,6 +187,32 @@ main {
   }
   & > .profile-content:not(.no-padding) {
     padding: 1rem;
+  }
+  & > .profile-content {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      & > li {
+        padding: 1rem;
+        transition: background-color 0.1s linear, color 0.1s linear;
+        &:not(:last-child) {
+          border-bottom: #DDD 1px solid
+        }
+        &:hover {
+          color: white;
+          background-color: $select;
+        }
+        &:active {
+          color: white;
+          background-color: darken($select, 10%);
+        }
+        &.active {
+          color: white;
+          background-color: $select;
+        }
+      }
+    }
   }
 }
 
