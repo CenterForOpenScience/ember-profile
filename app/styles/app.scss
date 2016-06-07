@@ -136,9 +136,8 @@ main {
   }
 }
 
-#noindent{
-  padding-left: 0px;
-  padding-right: 0px;
+.no-padding {
+  padding: 0;
 }
 
 #mailicon {
@@ -167,11 +166,44 @@ main {
     background-color: #F5F5F5;
     border-bottom: #DDD 1px solid;
   }
-  & > .profile-content {
+  & > .profile-content:not(.no-padding) {
     padding: 1rem;
   }
 }
 
-#samplespacing {
+#single-col-indent {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.samplespacing {
   padding-bottom: 2rem;
+}
+
+.collab-box {
+  @extend %clear;
+  border-bottom: 1px solid darkgrey;
+}
+
+.collab-pic {
+  width: 8rem;
+  height: 8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid lightgrey;
+  border-radius: 15%;
+}
+
+#collab-info {
+  padding-left: 3.5rem;
+  margin-top: 3px;
+}
+
+#collab-social {
+  margin-top: -1px;
+}
+
+#collaborators {
+  height: 75rem;
+  overflow: scroll;
 }

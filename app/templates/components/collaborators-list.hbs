@@ -1,0 +1,34 @@
+{{#each model as |collaborator|}}
+  <div class="collab-box">
+    <div class="col-md-1">
+      <img class="collab-pic" src={{collaborator.img}}>
+    </div>
+    <div class="col-md-11" id="collab-info">
+      <h4><b>{{collaborator.name}}</b> <i>({{collaborator.projects}} Projects)</i></h4>
+      <p>{{collaborator.location}} | {{collaborator.title}}</p>
+      <ul class="list-inline" id="collab-social">
+        <li>
+          <i class="fa fa-globe social-icons" data-toggle="tooltip" title="Personal Website"></i>
+        </li>
+        <li>
+          <i class="fa fa-twitter social-icons" data-toggle="tooltip" title="Twitter"></i>
+        </li>
+        <li>
+          <i class="fa fa-github-alt social-icons" data-toggle="tooltip" title="Github"></i>
+        </li>
+        <li>
+          <i class="fa fa-linkedin social-icons" data-toggle="tooltip" title="LinkedIn"></i>
+        </li>
+        <li>
+          <i class="fa fa-info-circle social-icons" data-toggle="tooltip" title="ImpactStory"></i>
+        </li>
+        <li>
+          <i class="fa social-icons" data-toggle="tooltip" title="ORCiD">iD</i>
+        </li>
+        <li>
+          <i class="fa social-icons" data-toggle="tooltip" title="ResearcherID">R</i>
+        </li>
+      </ul>
+    </div>
+  </div>
+{{/each}}
