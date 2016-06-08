@@ -1,19 +1,21 @@
-{{#each model as |educator|}}
-  <div class="education-employment">
-    {{#cp-panel}}
-      {{#cp-panel-toggle}}
-        <h4>{{educator.name}}</h4>
-      {{/cp-panel-toggle}}
-      {{#cp-panel-body}}
-        <dl class="dl-horizontal">
-          <dt>Department:</dt>
-          <dd>{{educator.department}}</dd>
-          <dt>Degree:</dt>
-          <dd>{{educator.degree}}</dd>
-          <dt>Dates:</dt>
-          <dd>{{educator.dates}}</dd>
-        </dl>
-      {{/cp-panel-body}}
-    {{/cp-panel}}
-  </div>
-{{/each}}
+{{#cp-panels accordion=true}}
+  {{#each model as |educator|}}
+    <div class="education-employment">
+      {{#cp-panel}}
+        {{#cp-panel-toggle}}
+          <h4>{{educator.name}}</h4>
+        {{/cp-panel-toggle}}
+        {{#cp-panel-body}}
+          <dl class="dl-horizontal edu-Emp-Info">
+            <dt>Department:</dt>
+            <dd>{{educator.department}}</dd>
+            <dt>Degree:</dt>
+            <dd>{{educator.degree}}</dd>
+            <dt>Dates:</dt>
+            <dd>{{educator.dates}}</dd>
+          </dl>
+        {{/cp-panel-body}}
+      {{/cp-panel}}
+    </div>
+  {{/each}}
+{{/cp-panels}}

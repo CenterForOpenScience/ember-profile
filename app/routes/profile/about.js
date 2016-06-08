@@ -31,10 +31,15 @@ export default Ember.Route.extend({
         dates: '4-29-2015 - 5-10-2016'
       }],
       education: [{
-        name: 'College',
-        department: 'Science',
-        degree: 'Ember Education',
-        dates: '6-6-2016 - 6-7-2016'
+        name: 'University of Virginia',
+        department: 'College of Engineering',
+        degree: 'Computer Science',
+        dates: '8-22-2011 - 5-14-2015'
+      }, {
+        name: 'Virginia Tech',
+        department: 'College of Engineering',
+        degree: 'Masters of Computer Science',
+        dates: '8-22-2015 - 5-17-2017'
       }]
     };
   }

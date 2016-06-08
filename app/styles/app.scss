@@ -262,9 +262,10 @@ main {
 
 .education-employment {
   @extend %clear;
-  & > ul {
-    list-style-type: none;
-  }
+}
+
+.edu-Emp-Info {
+  margin-bottom: 0;
 }
 
 .cp-Panel {
@@ -272,7 +273,13 @@ main {
 }
 .cp-Panel-toggle {
   display: block;
-  padding: 1em;
+  background-color: #fafafa;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  & > h4 {
+    color: #2e2e2e;
+  }
 }
 .cp-Panel-toggle:link {
   text-decoration: none;
