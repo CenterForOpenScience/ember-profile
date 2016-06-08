@@ -2,7 +2,12 @@
   <div>
     {{#cp-panel}}
       {{#cp-panel-toggle}}
-        <h4>{{employer.name}}</h4>
+        <div class="drop-down">
+          <aside>
+            <h4>{{employer.name}}</h4>
+          </aside>
+          {{fa-icon "chevron-right" size=1}}
+        </div>
       {{/cp-panel-toggle}}
       {{#cp-panel-body}}
         <dl class="dl-horizontal">

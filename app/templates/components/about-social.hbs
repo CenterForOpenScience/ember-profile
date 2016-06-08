@@ -2,7 +2,7 @@
 	{{#each model as |social|}}
     {{#if social.name}}
 	    <a href="{{social.link}}">
-        <h4 href="{{social.link}}"><button class="btn btn-link">{{fa-icon social.icon}}</button> {{social.name}}</h4>
+        <h4 href="{{social.link}}" class="no-margins"><button class="btn btn-link">{{fa-icon social.icon}}</button> {{social.name}}</h4>
       </a>
     {{/if}}
 	{{/each}}
