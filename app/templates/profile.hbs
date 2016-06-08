@@ -16,11 +16,14 @@
         </li>
       </ul>
     </nav>
-    <div id="selfview">
-      <h5 class="col-md-6">Public Profile: osf.io/dskfb</h5>
-      <h5 class="col-md-6">Edit your profile    <div {{action 'toggle'}}><i class="fa fa-toggle-on fa-2x active-edit" style="display:none;"></i><i class="fa fa-toggle-off fa-2x inactive-edit"></i></div></h5>
+    <div id="profile-selfview">
+      <h5>Public Profile: osf.io/dskfb</h5>
+      <aside {{action 'toggle'}}>
+        <h5>Edit your profile</h5>
+        <i class="fa {{toggleIcon}}"></i>
+      </aside>
     </div>
-    <div id="name">
+    <div id="profile-name">
       <h1>{{model.name}}</h1>
       <h4>{{model.location}} | {{model.profession}}</h4>
     </div>

@@ -1,9 +1,9 @@
-<b>Bio:</b>
-<p><span id="bio-text">{{model.bio}}</span></p>
-<div class="col-md-6 no-padding">
-  <p><b>Phone:</b> <span>{{model.phone}}</span></p>
-  <p><b>Member since:</b> <span>{{model.join_date}}</span></p>
-</div>
-<div class="col-md-6 no-padding">
-  <div id="mailicon"></div>
+<div id="about-personal">
+  <h4>Bio:</h4>
+  <p>{{model.bio}}</p>
+  <aside>
+    <p><b>Phone:</b> {{model.phone}}</p>
+    <p><b>Member since:</b> {{model.join_date}}</p>
+  </aside>
+  {{fa-icon "envelope" size=3}}
 </div>

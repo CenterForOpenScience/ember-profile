@@ -126,7 +126,7 @@ main {
   }
 }
 
-#name {
+#profile-name {
   margin-top: calc(70vw/12*6/5 - 4rem - 4rem);
   margin-bottom: 3rem;
   text-align: center;
@@ -137,14 +137,17 @@ main {
   }
 }
 
-#selfview {
+#profile-selfview {
   @extend %clear;
   height: 4rem;
+  color: grey;
+  padding: 0 1rem;
   & > h5 {
-    color: grey;
-    &:last-child {
-      text-align: right;
-    }
+    float: left;
+  }
+  aside {
+    float: right;
+    text-align: right;
   }
 }
 
@@ -152,37 +155,28 @@ main {
   padding: 0;
 }
 
-#mailicon {
-  margin-left: 75%;
-  width: 25%;
-  border: 5px solid white;
-  background: white url("https://cdn0.iconfinder.com/data/icons/flat-green-icon-set/512/Mail_Icon_FlatGreen.png") no-repeat center;
-  background-size: cover;
-  &:before {
-    content: '';
-    display: block;
-    margin-top: 100%;
-  }
-}
-
 .activity-content {
   max-height: 30vh;
   overflow: scroll;
 }
 
-.project-stats dd {
-  border-bottom: solid 1px #F1F1F1;
-  margin-left: 51%;
+.activity-stats {
+  dd {
+    border-bottom: solid 1px #F1F1F1;
+    margin: 1rem 0 1rem 51%;
+  }
+  dt {
+    white-space: normal;
+    width: 50%;
+    padding-right: 1%;
+  }
 }
 
-.project-stats dt{
-  white-space: normal;
-  width: 50%;
-  padding-right: 1%;
-}
-
-.spaced-list {
-  margin: 10px 0;
+.activity-recent {
+  dd {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .toggle-container {
@@ -213,6 +207,17 @@ main {
   }
 }
 
+#about-personal {
+  @extend %clear;
+  aside {
+    float: left;
+  }
+  i {
+    float: right;
+    padding: 0 2rem 2rem;
+  }
+}
+
 #single-col-indent {
   padding-left: 5rem;
   padding-right: 5rem;
@@ -236,14 +241,6 @@ main {
   .collab-text {
     display: inline-block;
   }
-}
-
-.education-employment {
-  @extend %clear;
-}
-
-.edu-Emp-Info {
-  margin-bottom: 0;
 }
 
 .cp-Panel-toggle:link {

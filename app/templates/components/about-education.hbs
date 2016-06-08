@@ -1,12 +1,12 @@
 {{#cp-panels accordion=true}}
   {{#each model as |educator|}}
-    <div class="education-employment">
+    <div>
       {{#cp-panel}}
         {{#cp-panel-toggle}}
           <h4>{{educator.name}}</h4>
         {{/cp-panel-toggle}}
         {{#cp-panel-body}}
-          <dl class="dl-horizontal edu-Emp-Info">
+          <dl class="dl-horizontal">
             <dt>Department:</dt>
             <dd>{{educator.department}}</dd>
             <dt>Degree:</dt>
