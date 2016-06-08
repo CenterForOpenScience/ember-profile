@@ -1,33 +1,17 @@
 {{#each model as |collaborator|}}
-  <div class="collab-box">
-    <div class="col-md-1">
-      <img class="collab-pic" src={{collaborator.img}}>
-    </div>
-    <div class="col-md-11" id="collab-info">
+  <div class="collab-item">
+    <img src={{collaborator.img}}>
+    <div class="collab-text">
       <h4><b>{{collaborator.name}}</b> <i>({{collaborator.projects}} Projects)</i></h4>
       <p>{{collaborator.location}} | {{collaborator.title}}</p>
-      <ul class="list-inline" id="collab-social">
-        <li>
-          <i class="fa fa-globe social-icons" data-toggle="tooltip" title="Personal Website"></i>
-        </li>
-        <li>
-          <i class="fa fa-twitter social-icons" data-toggle="tooltip" title="Twitter"></i>
-        </li>
-        <li>
-          <i class="fa fa-github-alt social-icons" data-toggle="tooltip" title="Github"></i>
-        </li>
-        <li>
-          <i class="fa fa-linkedin social-icons" data-toggle="tooltip" title="LinkedIn"></i>
-        </li>
-        <li>
-          <i class="fa fa-info-circle social-icons" data-toggle="tooltip" title="ImpactStory"></i>
-        </li>
-        <li>
-          <i class="fa social-icons" data-toggle="tooltip" title="ORCiD">iD</i>
-        </li>
-        <li>
-          <i class="fa social-icons" data-toggle="tooltip" title="ResearcherID">R</i>
-        </li>
+      <ul class="list-inline">
+        <li title="Personal Website">{{fa-icon "fa-globe"}}</li>
+        <li title="Twitter">{{fa-icon "fa-twitter"}}</li>
+        <li title="Github">{{fa-icon "fa-github-alt"}}</li>
+        <li title="LinkedIn">{{fa-icon "fa-linkedin"}}</li>
+        <li title="ImpactStory">{{fa-icon "fa-info-circle"}}</li>
+        <li title="ORCiD">iD</li>
+        <li title="ResearcherID">R</li>
       </ul>
     </div>
   </div>

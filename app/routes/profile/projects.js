@@ -7,20 +7,38 @@ export default Ember.Route.extend({
       name: 'Project #1',
       wiki: 'wikiwiki',
       components: [{
-        name: 'ASDF'
+        name: 'Component 1',
+        link: 'profile.about'
+      }, {
+        name: 'Component 2',
+        link: 'profile.collaborators'
       }]
     }, {
       name: 'Project #2',
       wiki: wiki
     }, {
       name: 'Project #3',
-      wiki: 'something else!'
+      wiki: 'something else!',
+      components: [{
+        name: 'Component 1',
+        link: 'profile.activity'
+      }, {
+        name: 'Component 2',
+        link: 'profile.about'
+      }]
     }, {
       name: 'Project #4',
-      wiki: 'something else!'
+      wiki: wiki
     }, {
       name: 'Project #5',
-      wiki: 'something else!'
+      wiki: 'something else!',
+      components: [{
+        name: 'Component 1',
+        link: 'profile.activity'
+      }, {
+        name: 'Component 2',
+        link: 'profile.collaborators'
+      }]
     }, {
       name: 'Project #6',
       wiki: 'something else!'

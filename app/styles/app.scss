@@ -35,11 +35,17 @@ footer {
 
 main {
   @extend %clear;
-  & > section:first-child {
-    padding-right: 7.5px;
+  section.col-md-6 {
+    padding: 0 2rem 2rem;
   }
-  & > section:nth-child(2) {
-    padding-left: 7.5px;
+  section:first-child {
+    padding-right: 1rem;
+  }
+  section:nth-child(2) {
+    padding-left: 1rem;
+  }
+  section.col-md-12 {
+    padding: 0 2rem 2rem 2rem;
   }
 }
 
@@ -111,7 +117,7 @@ main {
   width: 120%;
   border: 5px solid white;
   border-radius: 50%;
-  background: white url("https://s3.amazonaws.com/uifaces/faces/twitter/_everaldo/128.jpg") no-repeat center;
+  background: white url("https://secure.gravatar.com/avatar/119ccf7175af9a2d1a103b8126667068?d=identicon&s=500") no-repeat center;
   background-size: cover;
   &:before {
     content: '';
@@ -121,13 +127,19 @@ main {
 }
 
 #name {
-  margin-top: 3rem;
+  margin-top: calc(70vw/12*6/5 - 4rem - 4rem);
   margin-bottom: 3rem;
   text-align: center;
+  h1 {
+    padding-top: 1vw;
+    line-height: 1;
+    margin-top: 0;
+  }
 }
 
 #selfview {
   @extend %clear;
+  height: 4rem;
   & > h5 {
     color: grey;
     &:last-child {
@@ -154,18 +166,19 @@ main {
 }
 
 .activity-content {
-  height: 359px;
+  max-height: 30vh;
   overflow: scroll;
 }
 
 .project-stats dd {
   border-bottom: solid 1px #F1F1F1;
-  margin-left: 220px;
+  margin-left: 51%;
 }
 
 .project-stats dt{
-    white-space: normal;
-    width: 200px;
+  white-space: normal;
+  width: 50%;
+  padding-right: 1%;
 }
 
 .spaced-list {
@@ -198,32 +211,6 @@ main {
   & > .profile-content:not(.no-padding) {
     padding: 1rem;
   }
-  & > .profile-content {
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      & > li {
-        padding: 1rem;
-        transition: background-color 0.1s linear, color 0.1s linear;
-        &:not(:last-child) {
-          border-bottom: #DDD 1px solid
-        }
-        &:hover {
-          color: white;
-          background-color: $select;
-        }
-        &:active {
-          color: white;
-          background-color: darken($select, 10%);
-        }
-        &.active {
-          color: white;
-          background-color: $select;
-        }
-      }
-    }
-  }
 }
 
 #single-col-indent {
@@ -231,33 +218,24 @@ main {
   padding-right: 5rem;
 }
 
-
-.collab-box {
-  @extend %clear;
-  border-bottom: 1px solid darkgrey;
-}
-
-.collab-pic {
-  width: 8rem;
-  height: 8rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid lightgrey;
-  border-radius: 15%;
-}
-
-#collab-info {
-  padding-left: 3.5rem;
-  margin-top: 3px;
-}
-
-#collab-social {
-  margin-top: -1px;
-}
-
-#collaborators {
-  height: 75rem;
+#profile-collaborators .profile-content {
+  max-height: 70vh;
   overflow: scroll;
+  .collab-item {
+    border-bottom: 1px solid #DDD;
+  }
+
+  img {
+    width: 8rem;
+    height: 8rem;
+    border: 1px solid lightgrey;
+    border-radius: 50%;
+    vertical-align: top;
+    margin: 1rem;
+  }
+  .collab-text {
+    display: inline-block;
+  }
 }
 
 .education-employment {
@@ -268,25 +246,97 @@ main {
   margin-bottom: 0;
 }
 
-.cp-Panel {
-  border: 1px solid #ddd;
-}
-.cp-Panel-toggle {
-  display: block;
-  background-color: #fafafa;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1.5rem;
-  & > h4 {
-    color: #2e2e2e;
-  }
-}
 .cp-Panel-toggle:link {
   text-decoration: none;
 }
-.cp-Panel-toggle:hover {
-  background-color: whitesmoke;
+
+#profile-about {
+  .cp-Panel {
+    border: 1px solid #DDD;
+  }
+  .cp-Panel-toggle {
+    display: block;
+    background-color: #FAFAFA;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    & > h4 {
+      color: #2E2E2E;
+    }
+  }
+  .cp-Panel-toggle:hover {
+    background-color: whitesmoke;
+  }
+  .cp-Panel-body-inner {
+    padding: 1em;
+  }
 }
-.cp-Panel-body-inner {
-  padding: 1em;
+
+.projects-panel {
+  height: 50vh;
+  overflow: scroll;
+}
+
+#projects-detail {
+  padding: 1rem;
+  p {
+    word-break: keep-all;
+  }
+}
+
+#projects-list {
+  .cp-Panel {
+    border: 1px #DDD;
+    border-style: none none solid;
+  }
+  .cp-Panel-toggle {
+    @extend %clear;
+    display: block;
+    padding: 0;
+    color: black;
+    transition: color 0.1s linear, background-color 0.1s linear;
+    &:hover, &.cp-is-open {
+      background-color: $select;
+      color: white;
+    }
+    &:active {
+      background-color: darken($select, 10%);
+    }
+  }
+  h1 {
+    padding: 1rem;
+    margin: 0;
+    font-size: 2rem;
+  }
+  h2 {
+    float: right;
+    padding: 1rem;
+    margin: 0;
+    font-size: 2rem;
+  }
+  .cp-Panel-body-inner {
+    padding: 0;
+  }
+  nav {
+    padding: 0;
+    margin: 0;
+    & > a {
+      display: block;
+      padding: 1rem;
+      color: black;
+      background-color: #F5F5F5;
+      transition: color 0.1s linear, background-color 0.1s linear;
+      &:not(:last-child) {
+        border-bottom: #DDD 1px solid;
+      }
+      &:hover {
+        color: white;
+        background-color: $select;
+        text-decoration: none;
+      }
+      &:active {
+        background-color: darken($select, 10%);
+      }
+    }
+  }
 }
