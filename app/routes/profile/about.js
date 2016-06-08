@@ -18,6 +18,46 @@ export default Ember.Route.extend({
         site: 'LinkedIn',
         link: '/',
         icon: 'fa fa-linkedin-square fa-3x'
+      }, {
+        name: '',
+        site: 'ORCID',
+        link: '/',
+        icon: 'fa fa-external-link-square fa-3x'
+      }, {
+        name: '',
+        site: 'ResearcherID',
+        link: '/',
+        icon: 'fa fa-external-link-square fa-3x'
+      }, {
+        name: '',
+        site: 'Github',
+        link: '/',
+        icon: 'fa fa-github fa-3x'
+      }, {
+        name: '',
+        site: 'ImpactStory',
+        link: '/',
+        icon: 'fa fa-external-link-square fa-3x'
+      }, {
+        name: '',
+        site: 'Google Scholar',
+        link: '/',
+        icon: 'fa fa-google fa-3x'
+      }, {
+        name: '',
+        site: 'ResearchGate',
+        link: '/',
+        icon: 'fa fa-external-link-square fa-3x'
+      }, {
+        name: '',
+        site: 'Academia',
+        link: '/',
+        icon: 'fa fa-external-link-square fa-3x'
+      }, {
+        name: '',
+        site: 'Baidu Scholar',
+        link: '/',
+        icon: 'fa fa-external-link-square fa-3x'
       }],
       employment: [{
         name: 'Center for Open Science',
