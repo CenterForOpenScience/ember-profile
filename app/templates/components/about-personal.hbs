@@ -1,9 +1,9 @@
 <div id="about-personal">
   <h4>Bio:</h4>
-  <p>{{model.bio}}</p>
+  <p class="editable">{{model.bio}}</p>
   <aside>
-    <p><b>Phone:</b> {{model.phone}}</p>
-    <p><b>Member since:</b> {{model.join_date}}</p>
+    <p><b>Phone:</b> <span class="editable">{{model.phone}}</span></p>
+    <p><b>Member since:</b> <span class="editable">{{model.join_date}}</span></p>
   </aside>
   {{fa-icon "envelope" size=3}}
 </div>

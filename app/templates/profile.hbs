@@ -20,7 +20,7 @@
       <h5>Public Profile: osf.io/dskfb</h5>
       <aside {{action 'toggle'}}>
         <h5>Edit your profile</h5>
-        <i class="fa {{toggleIcon}}"></i>
+        {{#toggle-switch isEnabled=model.editing}}{{/toggle-switch}}
       </aside>
     </div>
     <div id="profile-name">
