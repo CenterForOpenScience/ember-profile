@@ -172,6 +172,16 @@ main {
   margin: 10px 0;
 }
 
+.toggle-container {
+  position:absolute;
+  right:0;
+  top: 0;
+}
+
+.active-edit {
+  color:green;
+}
+
 .profile-box {
   @extend %clear;
   border: #DDD 1px solid;
