@@ -1,25 +1,21 @@
-<div id="projects-list" class="projects-panel">
-  {{#cp-panels accordion=true}}
-    {{#each model as |project|}}
-      {{#cp-panel}}
-        {{#cp-panel-toggle}}
-          <div {{action "select" project}}>
-            {{#if project.components}}
-              <h2>({{project.components.length}})</h2>
-            {{/if}}
-            <h1>{{project.name}}</h1>
-          </div>
-        {{/cp-panel-toggle}}
+{{#each model as |project|}}
+  {{#cp-panel}}
+    {{#cp-panel-toggle}}
+      <div {{action "select" project}}>
         {{#if project.components}}
-          {{#cp-panel-body}}
-            <nav>
-              {{#each project.components as |component|}}
-                {{#link-to component.link}}{{component.name}}{{/link-to}}
-              {{/each}}
-            </nav>
-          {{/cp-panel-body}}
+          <h2>({{project.components.length}})</h2>
         {{/if}}
-      {{/cp-panel}}
-    {{/each}}
-  {{/cp-panels}}
-</div>
+        <h1>{{project.name}}</h1>
+      </div>
+    {{/cp-panel-toggle}}
+    {{#if project.components}}
+      {{#cp-panel-body}}
+        <nav>
+          {{#each project.components as |component|}}
+            {{#link-to component.link}}{{component.name}}{{/link-to}}
+          {{/each}}
+        </nav>
+      {{/cp-panel-body}}
+    {{/if}}
+  {{/cp-panel}}
+{{/each}}

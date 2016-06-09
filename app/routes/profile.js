@@ -28,7 +28,8 @@ export default Ember.Route.extend({
           el = Ember.$(el);
           if (editing) {
             const input = Ember.$(`<${conversion.type} class="form-control" />`);
-            input.val(el.text()).css({width: el.css('width')});
+            // input.val(el.text()).css({width: el.css('width')});
+            input.val(el.text())
             el.text('').append(input);
           } else {
             el.text(el.find(conversion.type).val());
