@@ -72,14 +72,13 @@ main {
   width: 70vw;
   min-height: 90vh;
   margin-top: 30px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 #menu-list {
   list-style: none;
   margin: 0;
   padding: 0;
-  height: 4rem;
+  height: 5rem;
   & > li {
     padding: 0;
     margin: 0;
@@ -93,7 +92,8 @@ main {
     a {
       display: inline-block;
       background-color: $blue;
-      line-height: 4rem;
+      line-height: 5rem;
+      font-size: 2rem;
       text-align: center;
       color: white;
       transition: background-color 0.1s linear;
@@ -127,7 +127,7 @@ main {
 }
 
 #profile-name {
-  margin-top: calc(70vw/12*6/5 - 4rem - 4rem);
+  margin-top: calc(70vw/12*6/5 - 5rem - 4rem);
   margin-bottom: 3rem;
   text-align: center;
   h1 {
@@ -259,36 +259,30 @@ main {
 }
 
 #profile-about {
-  .cp-Panel {
-    border: 1px solid #DDD;
-  }
-  .cp-Panel-toggle {
-    @extend %clear;
-    display: block;
-    background-color: #FAFAFA;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1.5rem;
-    &:hover {
-      background-color: whitesmoke;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      @extend %clear;
+      display: block;
+      padding: 1rem 2rem;
+      transition: background-color 0.1s linear;
+      &:hover {
+        background-color: whitesmoke;
+      }
+      & > h4 {
+        float: left;
+        color: #2E2E2E;
+        word-break: normal;
+        & > i {
+          font-size: 0.9em;
+        }
+      }
+      & > h5 {
+        float: right;
+      }
     }
-    & > h4 {
-      float: left;
-      color: #2E2E2E;
-      word-break: normal;
-    }
-    & > i {
-      float: right;
-      padding: 1.25rem;
-      color: gray;
-      transition: transform 0.1s linear;
-    }
-    &.cp-is-open > i {
-      transform: rotate(90deg);
-    }
-  }
-  .cp-Panel-body-inner {
-    padding: 1em;
   }
 }
 

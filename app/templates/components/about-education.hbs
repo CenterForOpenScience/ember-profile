@@ -1,18 +1,6 @@
 {{#each model as |educator|}}
-  {{#cp-panel}}
-    {{#cp-panel-toggle}}
-      <h4 class="editable">{{educator.name}}</h4>
-      {{fa-icon "chevron-right" size=1}}
-    {{/cp-panel-toggle}}
-    {{#cp-panel-body}}
-      <dl class="dl-horizontal">
-        <dt>Department:</dt>
-        <dd class="editable">{{educator.department}}</dd>
-        <dt>Degree:</dt>
-        <dd class="editable">{{educator.degree}}</dd>
-        <dt>Dates:</dt>
-        <dd class="editable">{{educator.dates}}</dd>
-      </dl>
-    {{/cp-panel-body}}
-  {{/cp-panel}}
+  <li>
+    <h4 class="editable">{{educator.name}}, <i>{{educator.degree}}</i></h4>
+    <h5 class="editable">{{educator.dates}}</h5>
+  </li>
 {{/each}}
