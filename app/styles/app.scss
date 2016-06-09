@@ -258,6 +258,7 @@ main {
     border: 1px solid #DDD;
   }
   .cp-Panel-toggle {
+    @extend %clear;
     display: block;
     background-color: #FAFAFA;
     padding-top: 0.5rem;
@@ -266,23 +267,18 @@ main {
     &:hover {
       background-color: whitesmoke;
     }
-    & > .drop-down {
-      @extend %clear;
-      & > aside {
-        float: left;
-        & > h4 {
-          color: #2E2E2E;
-          word-break: normal;
-        }
-      }
-      & > i {
-        float: right;
-        padding: 1.25rem;
-        color: gray;
-        transition: transform 0.1s linear;
-      }
+    & > h4 {
+      float: left;
+      color: #2E2E2E;
+      word-break: normal;
     }
-    &.cp-is-open > .drop-down > i {
+    & > i {
+      float: right;
+      padding: 1.25rem;
+      color: gray;
+      transition: transform 0.1s linear;
+    }
+    &.cp-is-open > i {
       transform: rotate(90deg);
     }
   }

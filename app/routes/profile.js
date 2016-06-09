@@ -5,7 +5,7 @@ export default Ember.Route.extend({
     selectors: ['p'],
     type: 'textarea'
   }, {
-    selectors: ['span', 'dd'],
+    selectors: ['span', 'dd', 'h4'],
     type: 'input'
   }],
   model() {
@@ -20,15 +20,16 @@ export default Ember.Route.extend({
   	toggle() {
       let editing = !this.get('currentModel.editing');
       this.set('currentModel.editing', editing);
-      let main = Ember.$('main');
+      const main = Ember.$('main');
       main.hide();
       for (const conversion of this.get('conversions')) {
-        let els = main.find(conversion.selectors.join('.editable, ') + '.editable');
+        const els = main.find(conversion.selectors.join('.editable, ') + '.editable');
         for (let el of els) {
           el = Ember.$(el);
           if (editing) {
-            let t = el.text();
-            el.text('').append(Ember.$(`<${conversion.type} class="form-control" />`, {value: t}).val(t));
+            const input = Ember.$(`<${conversion.type} class="form-control" />`);
+            input.val(el.text()).css({width: el.css('width')});
+            el.text('').append(input);
           } else {
             el.text(el.find(conversion.type).val());
           }

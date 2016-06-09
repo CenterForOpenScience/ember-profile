@@ -1,26 +1,18 @@
-{{#cp-panels accordion=true}}
-  {{#each model as |educator|}}
-    <div>
-      {{#cp-panel}}
-        {{#cp-panel-toggle}}
-          <div class="drop-down">
-            <aside>
-              <h4>{{educator.name}}</h4>
-            </aside>
-            {{fa-icon "chevron-right" size=1}}
-          </div>
-        {{/cp-panel-toggle}}
-        {{#cp-panel-body}}
-          <dl class="dl-horizontal">
-            <dt>Department:</dt>
-            <dd class="editable">{{educator.department}}</dd>
-            <dt>Degree:</dt>
-            <dd class="editable">{{educator.degree}}</dd>
-            <dt>Dates:</dt>
-            <dd class="editable">{{educator.dates}}</dd>
-          </dl>
-        {{/cp-panel-body}}
-      {{/cp-panel}}
-    </div>
-  {{/each}}
-{{/cp-panels}}
+{{#each model as |educator|}}
+  {{#cp-panel}}
+    {{#cp-panel-toggle}}
+      <h4 class="editable">{{educator.name}}</h4>
+      {{fa-icon "chevron-right" size=1}}
+    {{/cp-panel-toggle}}
+    {{#cp-panel-body}}
+      <dl class="dl-horizontal">
+        <dt>Department:</dt>
+        <dd class="editable">{{educator.department}}</dd>
+        <dt>Degree:</dt>
+        <dd class="editable">{{educator.degree}}</dd>
+        <dt>Dates:</dt>
+        <dd class="editable">{{educator.dates}}</dd>
+      </dl>
+    {{/cp-panel-body}}
+  {{/cp-panel}}
+{{/each}}
