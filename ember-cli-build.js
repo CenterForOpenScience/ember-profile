@@ -15,6 +15,10 @@ module.exports = function(defaults) {
       cascade: false
     }
   });
+  app.import({
+    development: 'bower_components/Chart.js/dist/Chart.js',
+    production: 'bower_components/Chart.js/dist/Chart.min.js'
+  });
 
   // Use `app.import` to add additional libraries to the generated
   // output files.

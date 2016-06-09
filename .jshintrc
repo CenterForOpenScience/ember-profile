@@ -1,6 +1,7 @@
 {
   "predef": [
     "document",
+    "Chart",
     "window",
     "-Promise"
   ],

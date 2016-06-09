@@ -30,7 +30,27 @@ export default Ember.Route.extend({
       }, {
       	datetime: '5-17-2016 8:31am',
       	description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo'
-      }]
+      }],
+      chartData: {
+        labels: ['August', 'September', 'October', 'November', 'December', 'January', 'February', 'March', 'April', 'May'],
+        datasets: [{
+          label: 'Activity',
+          data: [1, 4, 5, 7, 11, 12, 15, 20, 7, 9],
+          fill: true,
+          lineTension: 0.1,
+          backgroundColor: 'rgba(75,192,192,0.3)',
+          pointBorderWidth: 1,
+          pointHoverWidth: 5,
+          borderColor: 'rgba(75,192,192,1)',
+          borderCapStyle: 'butt',
+          borderDash: [],
+          pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+          pointHoverBorderColor: 'rgba(220,220,220,1)',
+          pointHoverBorderWidth: 2,
+          pointRadius: 5,
+          pointHitRadius: 10
+        }]
+      }
     };
   }
 });
