@@ -216,9 +216,11 @@ main {
   aside {
     float: left;
   }
-  i {
+  div {
     float: right;
-    padding: 0 2rem 2rem;
+    i {
+      color: black;
+    }
   }
 }
 
