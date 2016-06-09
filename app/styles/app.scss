@@ -222,22 +222,6 @@ main {
   }
 }
 
-.drop-down {
-  @extend %clear;
-  aside {
-    float: left;
-    & > h4 {
-      color: #2E2E2E;
-      word-break: normal;
-    }
-  }
-  i {
-    float: right;
-    padding: 1.25rem;
-    color: gray;
-  }
-}
-
 #single-col-indent {
   padding-left: 5rem;
   padding-right: 5rem;
@@ -277,9 +261,28 @@ main {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 1.5rem;
-  }
-  .cp-Panel-toggle:hover {
-    background-color: whitesmoke;
+    &:hover {
+      background-color: whitesmoke;
+    }
+    & > .drop-down {
+      @extend %clear;
+      & > aside {
+        float: left;
+        & > h4 {
+          color: #2E2E2E;
+          word-break: normal;
+        }
+      }
+      & > i {
+        float: right;
+        padding: 1.25rem;
+        color: gray;
+        transition: transform 0.1s linear;
+      }
+    }
+    &.cp-is-open > .drop-down > i {
+      transform: rotate(90deg);
+    }
   }
   .cp-Panel-body-inner {
     padding: 1em;
