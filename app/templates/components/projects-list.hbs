@@ -3,7 +3,9 @@
     {{#cp-panel-toggle}}
       <div {{action "select" project}}>
         {{#if project.components}}
-          <h2>({{project.components.length}})</h2>
+          <h2>({{pluralize project.components.length "Component"}})</h2>
+        {{else}}
+          <h2>(No Components)</h2>
         {{/if}}
         <h1>{{project.name}}</h1>
       </div>
