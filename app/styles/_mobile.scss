@@ -1,0 +1,80 @@
+@import 'variables';
+
+@mixin media($type) {
+  @if $type == 'xs' {
+    @media(max-width:767px) { @content; }
+  } @else if $type == 'sm' {
+    @media(max-width:991px) { @content; }
+  } @else if $type == 'md' {
+    @media(max-width:1199px) { @content; }
+  } @else if $type == 'lg' {
+    @media(max-width:1919px) { @content; }
+  } @else if $type == 'xl' {
+    @media(min-width: 1920px) { @content; }
+  }
+}
+
+@include media(sm) {
+  #banner {
+    height: 40rem;
+  }
+  #body-background {
+    //margin-top: 50px;
+    margin: 0;
+    min-height: 100vh;
+  }
+  #menu-list {
+    .col-md-2 {
+      position: absolute;
+      height: 0;
+      width: 100%;
+      top: -5rem;
+    }
+    & > li {
+      a {
+        width: 100%;
+      }
+      & > h5, & > button {
+        display: none;
+        float: none;
+        position: absolute;
+        top: 50%;
+      }
+    }
+  }
+  #profile-picture-wrapper {
+    width: 50%;
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+  #profile-picture {
+    margin-top: -100%;
+    width: 100%;
+    margin-left: 0;
+    border-width: 2px;
+  }
+}
+
+@include media(md) {
+  #body-background {
+    width: 100vw;
+  }
+
+  #profile-name {
+    margin-top: calc(100vw/12*6/5 - 5rem - 4rem);
+  }
+
+  #body-wrapper {
+    padding-bottom: 0;
+    background: none;
+  }
+}
+
+@include media(xl) {
+  #profile-picture {
+    width: 110%;
+    margin-top: -55%;
+    margin-left: -5%;
+    border-width: 5px;
+  }
+}

@@ -51,8 +51,6 @@ main {
 
 #banner {
   position: relative;
-  left: 0;
-  top: 0;
   height: 300px;
   background: #166595 url("https://osf.io/static/img/front-page/bg-web.png") no-repeat center top;
   background-size: cover;
@@ -75,14 +73,26 @@ main {
 }
 
 #menu-list {
+  @extend %clear;
+  position: relative;
   list-style: none;
   margin: 0;
   padding: 0;
-  height: 5rem;
   & > li {
+    //@extend %clear;
     padding: 0;
     margin: 0;
-    height: 100%;
+    h5 {
+      padding: 1rem;
+      margin: 0;
+      clear: left;
+    }
+    button {
+      float: right;
+      margin: 1rem;
+      padding: 0.5rem 1rem;
+      clear: left;
+    }
   }
 
   li {
@@ -115,7 +125,7 @@ main {
   margin-top: -60%;
   margin-left: -10%;
   width: 120%;
-  border: 5px solid white;
+  border: 3px solid white;
   border-radius: 50%;
   background: white url("https://secure.gravatar.com/avatar/119ccf7175af9a2d1a103b8126667068?d=identicon&s=500") no-repeat center;
   background-size: cover;
@@ -127,27 +137,12 @@ main {
 }
 
 #profile-name {
-  margin-top: calc(70vw/12*6/5 - 5rem - 4rem);
   margin-bottom: 3rem;
   text-align: center;
   h1 {
     padding-top: 1vw;
     line-height: 1;
     margin-top: 0;
-  }
-}
-
-#profile-selfview {
-  @extend %clear;
-  height: 4rem;
-  color: grey;
-  padding: 0 1rem;
-  & > h5 {
-    float: left;
-  }
-  aside {
-    float: right;
-    text-align: right;
   }
 }
 
@@ -354,3 +349,5 @@ main {
     }
   }
 }
+
+@import 'mobile';

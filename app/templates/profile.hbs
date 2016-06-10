@@ -6,23 +6,20 @@
         <li class="col-md-5">
           {{#link-to "profile.about" class="col-md-6"}}About{{/link-to}}
           {{#link-to "profile.projects" class="col-md-6"}}Projects{{/link-to}}
+	        <h5>Public Profile: osf.io/dskfb</h5>
         </li>
         <li class="col-md-2">
-          <div id="profile-picture"></div>
+          <div id="profile-picture-wrapper">
+            <div id="profile-picture"></div>
+          </div>
         </li>
         <li class="col-md-5">
           {{#link-to "profile.collaborators" class="col-md-6"}}Collaborators{{/link-to}}
           {{#link-to "profile.activity" class="col-md-6"}}Activity{{/link-to}}
+          <button {{action 'toggle'}}>Edit your profile</button>
         </li>
       </ul>
     </nav>
-    <div id="profile-selfview">
-      <h5>Public Profile: osf.io/dskfb</h5>
-      <aside {{action 'toggle'}}>
-        <h5>Edit your profile</h5>
-        {{#toggle-switch isEnabled=model.editing}}{{/toggle-switch}}
-      </aside>
-    </div>
     <div id="profile-name">
       <h1>{{model.name}}</h1>
       <h4>{{model.location}} | {{model.profession}}</h4>
