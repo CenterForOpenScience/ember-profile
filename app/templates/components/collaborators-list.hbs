@@ -1,22 +1,18 @@
 {{#each model as |collaborator|}}
-  <div class="collab-item">
+  <li class="collab-item col-md-6">
     <img src={{collaborator.img}}>
     <div class="collab-text">
+      <h4>{{collaborator.name}}</h4>
+      <h5>{{collaborator.projects}} Projects | {{collaborator.location}} | {{collaborator.title}}</h5>
       <ul class="list-inline">
-        <li>
-          <h4><b>{{collaborator.name}}</b></h4>
-        </li>
-        <li>
-          <h5>{{collaborator.projects}} Projects | {{collaborator.location}} | {{collaborator.title}}</h5>
-        </li>
-        <li title="Personal Website">{{fa-icon "fa-globe"}}</li>
-        <li title="Twitter">{{fa-icon "fa-twitter"}}</li>
-        <li title="Github">{{fa-icon "fa-github-alt"}}</li>
-        <li title="LinkedIn">{{fa-icon "fa-linkedin"}}</li>
-        <li title="ImpactStory">{{fa-icon "fa-info-circle"}}</li>
+        {{fa-icon "fa-globe" tagName="li" title="Personal Website"}}
+        {{fa-icon "fa-twitter" tagName="li" title="Twitter"}}
+        {{fa-icon "fa-github-alt" tagName="li" title="Github"}}
+        {{fa-icon "fa-linkedin" tagName="li" title="LinkedIn"}}
+        {{fa-icon "fa-info-circle" tagName="li" title="ImpactStory"}}
         <li title="ORCiD">iD</li>
         <li title="ResearcherID">R</li>
       </ul>
     </div>
-  </div>
+  </li>
 {{/each}}

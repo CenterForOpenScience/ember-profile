@@ -1,6 +1,7 @@
 @import 'bootstrap';
 @import 'navbar';
 @import 'variables';
+@import 'mixins';
 
 %clear {
   &:after {
@@ -160,21 +161,34 @@ main {
 }
 
 .activity-stats {
+  @extend %clear;
+  margin-bottom: 0;
   dd {
-    border-bottom: solid 1px #F1F1F1;
-    margin: 1rem 0 1rem 51%;
+    display: inline-block;
+    float: right;
+    width: 50%;
+    margin: 0;
+    padding-left: 1rem;
+    &:not(:first-of-type) {
+      padding-top: 1rem;
+    }
   }
   dt {
+    clear: both;
+    float: left;
+    display: inline-block;
     white-space: normal;
     width: 50%;
-    padding-right: 1%;
+    padding-right: 1rem;
+    &:not(:first-of-type) {
+      padding-top: 1rem;
+    }
   }
 }
 
 .activity-recent {
   dd {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
   }
 }
 
@@ -224,26 +238,45 @@ main {
   padding-right: 5rem;
 }
 
-#profile-collaborators .profile-content {
+#collaborators-list {
+  $item-height: 10rem;
+  @extend %clear;
   max-height: 70vh;
+  list-style: none;
+  padding: 0;
+  margin: 0;
   overflow: scroll;
-  .collab-item {
+  & > .collab-item {
     border-bottom: 1px solid #DDD;
+    padding: 1rem;
   }
 
   img {
-    width: 5rem;
-    height: 5rem;
-    border: 1px solid lightgrey;
+    display: inline-block;
+    width: $item-height;
+    margin-right: 1rem;
     border-radius: 50%;
+    background: white center no-repeat;
+    background-size: cover;
     vertical-align: top;
-    margin: 1rem;
+    &:before {
+      content: '';
+      display: block;
+      margin-top: 100%;
+    }
   }
   .collab-text {
     display: inline-block;
+    height: $item-height;
     h5 {
-      padding-left: 1rem;
-      padding-right: 1rem;
+      font-weight: normal;
+    }
+    h4 {
+      font-weight: 600;
+    }
+    h4, h5, ul {
+      line-height: $item-height / 3;
+      margin: 0;
     }
   }
 

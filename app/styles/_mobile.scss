@@ -1,18 +1,5 @@
 @import 'variables';
-
-@mixin media($type) {
-  @if $type == 'xs' {
-    @media(max-width:767px) { @content; }
-  } @else if $type == 'sm' {
-    @media(max-width:991px) { @content; }
-  } @else if $type == 'md' {
-    @media(max-width:1199px) { @content; }
-  } @else if $type == 'lg' {
-    @media(max-width:1919px) { @content; }
-  } @else if $type == 'xl' {
-    @media(min-width: 1920px) { @content; }
-  }
-}
+@import 'mixins';
 
 @include media(sm) {
   #banner {
@@ -53,15 +40,41 @@
     margin-left: 0;
     border-width: 2px;
   }
+  main section {
+    padding: 0 !important;
+  }
+  .profile-box {
+    border-style: solid none;
+    margin-bottom: 2rem;
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+  .projects-panel {
+    height: inherit;
+  }
+  #collaborators-list {
+    $item-height: 7rem;
+    max-height: none;
+    img {
+      width: $item-height;
+    }
+    .collab-text {
+      height: $item-height;
+      h4, h5, ul {
+        line-height: $item-height / 3;
+      }
+    }
+  }
+  .activity-content {
+    max-height: none;
+  }
 }
 
 @include media(md) {
   #body-background {
     width: 100vw;
-  }
-
-  #profile-name {
-    margin-top: calc(100vw/12*6/5 - 5rem - 4rem);
   }
 
   #body-wrapper {
@@ -76,5 +89,8 @@
     margin-top: -55%;
     margin-left: -5%;
     border-width: 5px;
+  }
+  .collab-item {
+    width: (100% / 3);
   }
 }
