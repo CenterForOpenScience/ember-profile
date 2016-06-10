@@ -2,9 +2,13 @@
   <div class="collab-item">
     <img src={{collaborator.img}}>
     <div class="collab-text">
-      <h4><b>{{collaborator.name}}</b> <i>({{collaborator.projects}} Projects)</i></h4>
-      <p>{{collaborator.location}} | {{collaborator.title}}</p>
       <ul class="list-inline">
+        <li>
+          <h4><b>{{collaborator.name}}</b></h4>
+        </li>
+        <li>
+          <h5>{{collaborator.projects}} Projects | {{collaborator.location}} | {{collaborator.title}}</h5>
+        </li>
         <li title="Personal Website">{{fa-icon "fa-globe"}}</li>
         <li title="Twitter">{{fa-icon "fa-twitter"}}</li>
         <li title="Github">{{fa-icon "fa-github-alt"}}</li>

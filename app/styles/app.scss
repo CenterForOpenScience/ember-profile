@@ -237,8 +237,8 @@ main {
   }
 
   img {
-    width: 8rem;
-    height: 8rem;
+    width: 5rem;
+    height: 5rem;
     border: 1px solid lightgrey;
     border-radius: 50%;
     vertical-align: top;
@@ -246,7 +246,12 @@ main {
   }
   .collab-text {
     display: inline-block;
+    h5 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
   }
+
 }
 
 .cp-Panel-toggle:link {

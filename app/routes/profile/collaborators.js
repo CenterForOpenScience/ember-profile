@@ -50,6 +50,30 @@ export default Ember.Route.extend({
       location: 'Charlottesville, VA',
       title: 'Manager',
       img:'https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/10629609_10205150029179131_636541467117985880_n.jpg?oh=64a740f62497280bb4b3ebdaac509984&oe=57D677E4'
+    }, {
+      name: 'Jon Jafari',
+      projects: '1',
+      location: 'New York City, NY',
+      title: 'Content Creator',
+      img:'http://vignette3.wikia.nocookie.net/filthy-frank/images/c/c0/JonTron.png/revision/latest?cb=20151213000235'
+    }, {
+      name: 'Reggie Fils-Aime',
+      projects: '1',
+      location: 'Redwood City, CA',
+      title: 'President',
+      img:'http://b-i.forbesimg.com/davidewalt/files/2013/11/reggie_fils_aime.jpg'
+    }, {
+      name: 'Big Man Tyrone',
+      projects: '1',
+      location: 'Boston, MA',
+      title: 'Speaker',
+      img:'http://bigtyrone.com/wp-content/gallery/tyrone-gallery/rsz_tyrone_5.png'
+    }, {
+      name: 'Alexa Swanson',
+      projects: '1',
+      location: 'Charlottesville, VA',
+      title: 'Manager',
+      img:'https://www.morganstanley.com/assets/images/people/tiles/karlene-quigley-large.jpg'
     }];
   }
 });
