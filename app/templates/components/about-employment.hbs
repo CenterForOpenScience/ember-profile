@@ -1,6 +1,8 @@
 {{#each model as |employer|}}
   <li>
-    <h4 class="editable">{{employer.name}}, <i>{{employer.title}}</i></h4>
+    <h4 class="editable">{{employer.name}}</h4>
     <h5 class="editable">{{employer.dates}}</h5>
+    <h5 class="editable">{{employer.title}}</h5>
+    <h5 class="editable">{{employer.location}}</h5>
   </li>
 {{/each}}

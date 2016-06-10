@@ -63,23 +63,27 @@ export default Ember.Route.extend({
         name: 'Center for Open Science',
         department: 'Infrastructure',
         title: 'Developer',
-        dates: 'May 2016 – Current'
+        dates: 'May 2016 – Current',
+        location: 'Charlottesville, VA'
       }, {
         name: 'Willowtree',
         department: 'Development',
         title: 'Software Engineer',
-        dates: 'April 2015 – May 2016'
+        dates: 'April 2015 – May 2016',
+        location: 'Charlottesville, VA'
       }],
       education: [{
         name: 'University of Virginia',
         department: 'College of Engineering',
         degree: 'Computer Science',
-        dates: 'August 2011 – May 2015'
+        dates: 'August 2011 – May 2015',
+        location: 'Charlottesville, VA'
       }, {
         name: 'Virginia Tech',
         department: 'College of Engineering',
         degree: 'Masters of Computer Science',
-        dates: 'August 2015 – May 2017'
+        dates: 'August 2015 – May 2017',
+        location: 'Blacksburg, VA'
       }]
     };
   }

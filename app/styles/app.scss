@@ -294,21 +294,28 @@ main {
     li {
       @extend %clear;
       display: block;
-      padding: 1rem 2rem;
+      padding: .5rem 2rem;
       transition: background-color 0.1s linear;
       &:hover {
         background-color: whitesmoke;
       }
-      & > h4 {
-        float: left;
+      :first-child {
         color: #2E2E2E;
+        font-size: 16px;
+        font-weight: bold;
         word-break: normal;
-        & > i {
-          font-size: 0.9em;
-        }
+        margin-bottom: 0;
+        float: left;
       }
-      & > h5 {
+      :nth-child(2), :nth-child(4) {
         float: right;
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+      :nth-child(3) {
+        clear: both;
+        float: left;
+        font-size: 14px;
       }
     }
   }
