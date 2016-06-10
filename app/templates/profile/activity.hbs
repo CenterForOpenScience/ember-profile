@@ -1,9 +1,9 @@
 <main id="profile-activity">
   <section class="col-md-6">
     <div class="profile-box">
-      <h1>Projects</h1>
+      <h1>Metrics</h1>
       <div class="profile-content activity-content">
-        {{#activity-projects model=model.projects}}{{/activity-projects}}
+        {{#activity-stats model=model.projects}}{{/activity-stats}}
       </div>
     </div>
   </section>
@@ -17,7 +17,7 @@
   </section>
   <section class="col-md-12">
     <div class="profile-box">
-      <h1>Activity Chart</h1>
+      <h1>Activity</h1>
       <div class="profile-content">
         {{#activity-visits-plot data=model.chartData}}{{/activity-visits-plot}}
       </div>

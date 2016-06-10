@@ -1,6 +1,4 @@
-<dl class="dl-horizontal activity-recent">
-  {{#each model as |activity|}}
-    <dt>{{activity.datetime}}</dt>
-    <dd>{{activity.description}}</dd>
-  {{/each}}
-</dl>
+{{#each model as |activity|}}
+  <dt>{{activity.datetime}}</dt>
+  <dd>{{activity.description}}</dd>
+{{/each}}

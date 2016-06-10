@@ -160,7 +160,13 @@ main {
   overflow: scroll;
 }
 
-.activity-stats {
+.dl-horizontal {
+  dd:before, dd:after {
+    content: none;
+  }
+}
+
+#activity-stats {
   @extend %clear;
   margin-bottom: 0;
   dd {
@@ -186,7 +192,11 @@ main {
   }
 }
 
-.activity-recent {
+#activity-recent {
+  margin-bottom: 0;
+  dt {
+    margin-right: 1rem;
+  }
   dd {
     margin: 1rem 0;
   }
@@ -247,7 +257,7 @@ main {
   margin: 0;
   overflow: scroll;
   & > .collab-item {
-    border-bottom: 1px solid #DDD;
+    //border-bottom: 1px solid #DDD;
     padding: 1rem;
   }
 

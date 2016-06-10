@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  classNames: ['dl-horizontal', 'activity-stats'],
+  classNames: ['dl-horizontal'],
+  elementId: 'activity-stats',
   tagName: 'dl'
 });

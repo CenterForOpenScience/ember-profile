@@ -6,9 +6,8 @@
     height: 40rem;
   }
   #body-background {
-    //margin-top: 50px;
     margin: 0;
-    min-height: 100vh;
+    //min-height: 100vh;
   }
   #menu-list {
     .col-md-2 {
@@ -51,9 +50,6 @@
       border-bottom: none;
     }
   }
-  .projects-panel {
-    height: inherit;
-  }
   #collaborators-list {
     $item-height: 7rem;
     max-height: none;
@@ -80,6 +76,14 @@
   #body-wrapper {
     padding-bottom: 0;
     background: none;
+  }
+
+  #body-background {
+    min-height: 0;
+  }
+
+  .projects-panel {
+    height: inherit;
   }
 }
 

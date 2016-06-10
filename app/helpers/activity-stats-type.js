@@ -5,7 +5,7 @@ const projectStatTypes = {
   total_comp: 'Total Components',
   registrations: 'Registrations',
   comments: 'Comments',
-  contributers: 'Total Contributors',
+  contributors: 'Total Contributors',
   downloads: 'Total Downloads',
   most_downloaded: 'Most Downloaded Project',
   most_viewed: 'Most Viewed Project',
@@ -14,6 +14,7 @@ const projectStatTypes = {
   recent_downloads: 'Total Downloads Last 24-Hours',
   most_contributed: 'Most Contributed Project'
 };
+
 export function activityStatsType([type]/*, hash*/) {
   return projectStatTypes[type] || type;
 }
