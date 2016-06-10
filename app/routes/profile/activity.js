@@ -5,14 +5,16 @@ export default Ember.Route.extend({
     return {
       projects: {
         total_projects: '22',
-        public_projects: '9',
-        year_total_projects: '5',
         total_comp: '7',
-        public_comp: '4',
-        year_total_comp: '3',
         registrations: '1',
-        files: '12',
         comments: '42',
+        contributers: '16',
+        downloads: '349',
+        page_views: '869',
+        recent_views: '23',
+        recent_downloads: '11',
+        most_downloaded: 'Correlations between Causations',
+        most_viewed: 'Open Science Framework',
         most_contributed: 'Open Science Framework'
       },
       recent_activity: [{
