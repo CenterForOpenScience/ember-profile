@@ -1,7 +1,16 @@
 <main id="profile-collaborators">
   <section class="col-md-12">
     <div class="profile-box">
-      <h1>Collaborators</h1>
+      <div class="filter">
+        <h1>Collaborators</h1>
+          <label for="collab-filters">Filter by <select name="collab-filters">
+            <option value="projects">Projects</option>
+            <option value="name">Name</option>
+            <option value="location">Location</option>
+            <option value="title">Title</option>
+            </select>
+          </label>
+      </div>
       <div class="profile-content no-padding">
         {{#collaborators-list model=model}}{{/collaborators-list}}
       </div>

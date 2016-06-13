@@ -231,6 +231,26 @@ main {
     background-color: #F5F5F5;
     border-bottom: #DDD 1px solid;
   }
+  & > .filter {
+    @extend %clear;
+    padding: 1rem;
+    margin: 0;
+    background-color: #F5F5F5;
+    border-bottom: #DDD 1px solid;
+    & > h1 {
+      font-size: 2rem;
+      margin: 0;
+      float: left;
+    }
+    & > label {
+      margin: 0;
+      vertical-align: text-bottom;
+      float: right;
+      & > select {
+        font-size: 2rem;
+      }
+    }
+  }
   & > .profile-content:not(.no-padding) {
     padding: 1rem;
   }
@@ -313,7 +333,6 @@ main {
       padding: .5rem 2rem;
       transition: background-color 0.1s linear;
       &:hover {
-        background-color: whitesmoke;
       }
       :first-child {
         color: #2E2E2E;
