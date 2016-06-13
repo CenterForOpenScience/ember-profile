@@ -247,6 +247,7 @@ main {
       vertical-align: text-bottom;
       float: right;
       & > select {
+        margin-left: .5rem;
         font-size: 2rem;
       }
     }
