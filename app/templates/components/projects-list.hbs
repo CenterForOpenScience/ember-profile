@@ -1,13 +1,26 @@
 {{#each model as |project|}}
-  {{#cp-panel}}
+  {{#cp-panel class=(if project.private 'private')}}
     {{#cp-panel-toggle}}
-      <div {{action "select" project}}>
-        {{#if project.components}}
-          <h2>({{pluralize project.components.length "Component"}})</h2>
+      <div>
+        <h1 class="{{if project.private 'col-md-10' 'col-md-7'}}"><b>{{project.name}}</b> ({{project.year}}) {{project-collaborators project.collaborators}}</h1>
+        {{#if project.private}}
+          <button class="btn btn-default col-md-1">Make Public</button>
+          {{#if project.registered}}
+            {{fa-icon "check" class="col-md-1"}}
+          {{else}}
+            <button class="btn btn-link col-md-1">Register</button>
+          {{/if}}
         {{else}}
-          <h2>(No Components)</h2>
+          <h2 class="col-md-1">{{if project.components project.components.length 0}}</h2>
+          <h2 class="col-md-1">{{if project.collaborators project.collaborators.length 0}}</h2>
+          <h2 class="col-md-1">{{project.stats.files}}</h2>
+          <h2 class="col-md-1">{{project.stats.forks}}</h2>
+          {{#if project.registered}}
+            {{fa-icon "check" class="col-md-1"}}
+          {{else}}
+            {{fa-icon "times" class="col-md-1"}}
+          {{/if}}
         {{/if}}
-        <h1>{{project.name}}</h1>
       </div>
     {{/cp-panel-toggle}}
     {{#if project.components}}

@@ -45,7 +45,7 @@ main {
   section:nth-child(2) {
     padding-left: 1rem;
   }
-  section.col-md-12 {
+  section.full {
     padding: 0 2rem 2rem 2rem;
   }
 }
@@ -242,21 +242,23 @@ main {
     background-color: #F5F5F5;
     border-bottom: #DDD 1px solid;
   }
-  & > .filter {
+  & > header {
     @extend %clear;
-    padding: 1rem;
     margin: 0;
+    padding: 1rem 0;
     background-color: #F5F5F5;
     border-bottom: #DDD 1px solid;
-    & > h1 {
+    & > h1, & > .fa {
       font-size: 2rem;
       margin: 0;
       float: left;
+      padding: 0 1rem;
     }
     & > label {
       margin: 0;
       vertical-align: text-bottom;
       float: right;
+      padding: 0 1rem;
       & > select {
         margin-left: .5rem;
         font-size: 2rem;
@@ -381,36 +383,77 @@ main {
 }
 
 #projects-list {
+  $font-size: 2rem;
+  $warning-stripes: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(red, 0.4) 10px, rgba(red, 0.4) 20px);
   .cp-Panel {
     border: 1px #DDD;
     border-style: none none solid;
+    &.private {
+      //border: dotted red 1px;
+      .cp-Panel-toggle {
+        background: $warning-stripes;
+        &:hover {
+          background: $warning-stripes, $hover;
+        }
+        &:active, &.cp-is-open {
+          background: $warning-stripes, $select;
+        }
+        button {
+          margin: 0.5rem 0;
+          &.btn-link {
+            font-size: 1.6rem;
+            font-weight: bold;
+          }
+        }
+      }
+    }
   }
   .cp-Panel-toggle {
     @extend %clear;
     display: block;
     padding: 0;
     color: black;
-    transition: color 0.1s linear, background-color 0.1s linear;
-    &:hover, &.cp-is-open {
+    transition: color 0.1s linear, background 0.1s linear;
+    &.cp-is-open {
+      .fa {
+        color: white;
+      }
+      &:hover {
+        background-color: $select;
+      }
+    }
+    &:hover {
+      background-color: $hover;
+    }
+    &:active, &.cp-is-open {
       background-color: $select;
       color: white;
     }
-    &:active {
-      background-color: darken($select, 10%);
+    h2, .fa {
+      padding: 1rem;
+      margin: 0;
+      font-weight: normal;
+      font-size: $font-size;
+      line-height: $font-size;
+    }
+    .fa-times {
+      color: red;
+    }
+    .fa-check {
+      color: green;
     }
   }
-  $font-size: 2rem;
   h1 {
     padding: 1rem;
     margin: 0;
-    font-size: $font-size;
-  }
-  h2 {
-    float: right;
-    padding: 1rem;
-    margin: 0;
-    font-size: 1.5rem;
-    line-height: $font-size;
+    font-size: ($font-size * 0.8);
+    font-weight: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    b {
+      font-size: $font-size;
+    }
   }
   .cp-Panel-body-inner {
     padding: 0;

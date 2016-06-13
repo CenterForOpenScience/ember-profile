@@ -1,1 +1,17 @@
-{{#projects-dual-pane model=model}}{{/projects-dual-pane}}
+<main id="profile-projects">
+  <section class="full">
+    <div class="profile-box">
+      <header>
+        <h1 class="col-md-7">Projects</h1>
+        {{fa-icon "cog" class="col-md-1" title="Components"}}
+        {{fa-icon "users" class="col-md-1" title="Collaborators"}}
+        {{fa-icon "file" class="col-md-1" title="Files"}}
+        {{fa-icon "code-fork" class="col-md-1" title="Forks"}}
+        {{fa-icon "check" class="col-md-1" title="Registered"}}
+      </header>
+      <div class="profile-content no-padding">
+        {{#projects-list model=model}}{{/projects-list}}
+      </div>
+    </div>
+  </section>
+</main>
