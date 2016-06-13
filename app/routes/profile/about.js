@@ -84,7 +84,14 @@ export default Ember.Route.extend({
         degree: 'Masters of Computer Science',
         dates: 'August 2015 – May 2017',
         location: 'Blacksburg, VA'
-      }]
+      }],
+      uploads: [{}]
     };
+  },
+
+  actions: {
+    show_modal() {
+      Ember.$('#uploadModal').modal('show');
+    }
   }
 });

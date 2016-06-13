@@ -22,6 +22,7 @@ export default Ember.Route.extend({
       this.set('currentModel.editing', editing);
       const main = Ember.$('main');
       main.hide();
+      Ember.$('#file-upload').show();
       for (const conversion of this.get('conversions')) {
         const els = main.find(conversion.selectors.join('.editable, ') + '.editable');
         for (let el of els) {
@@ -33,6 +34,7 @@ export default Ember.Route.extend({
             el.text('').append(input);
           } else {
             el.text(el.find(conversion.type).val());
+            Ember.$('#file-upload').hide();
           }
         }
       }

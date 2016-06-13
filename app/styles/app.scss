@@ -159,6 +159,17 @@ main {
   margin: 0;
 }
 
+.btn-upload {
+  float: right;
+  padding-bottom: 10px;
+  display: none;
+}
+
+.empty-message {
+  margin-top: 10px;
+  text-align: center;
+}
+
 .activity-content {
   max-height: 30vh;
   overflow: scroll;
