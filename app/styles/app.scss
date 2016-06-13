@@ -170,6 +170,10 @@ main {
   text-align: center;
 }
 
+.biography-content textarea{
+  min-height: 100px;
+}
+
 .activity-content {
   max-height: 30vh;
   overflow: scroll;
