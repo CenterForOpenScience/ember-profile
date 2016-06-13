@@ -2,7 +2,7 @@
   {{#cp-panel class=(if project.private 'private')}}
     {{#cp-panel-toggle}}
       <div>
-        <h1 class="{{if project.private 'col-md-10' 'col-md-7'}}"><b>{{project.name}}</b> ({{project.year}}) {{project-collaborators project.collaborators}}</h1>
+        <h1 class="{{if project.private 'col-md-10' 'col-md-7'}}">{{fa-icon "chevron-down"}}<b>{{project.name}}</b> ({{project.year}}) {{project-collaborators project.collaborators}}</h1>
         {{#if project.private}}
           <button class="btn btn-default col-md-1">Make Public</button>
           {{#if project.registered}}

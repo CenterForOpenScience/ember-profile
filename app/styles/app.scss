@@ -211,16 +211,20 @@ main {
   }
 }
 
+@media(min-width:768px) {
+
 #activity-recent {
+  $width: 10em;
   margin-bottom: 0;
   dt {
-    margin-right: 1rem;
+    text-align: left;
+    width: $width;
+    float: left;
   }
-  /*
   dd {
-    margin: 1rem 0;
+    margin-left: $width;
   }
-  */
+}
 }
 
 .toggle-container {
@@ -402,14 +406,14 @@ main {
         &:active, &.cp-is-open {
           background: $warning-stripes, $select;
         }
-        button {
-          margin: 0.5rem 0;
-          &.btn-link {
-            font-size: 1.6rem;
-            font-weight: bold;
-          }
-        }
       }
+    }
+  }
+  button {
+    margin: 0.5rem 0;
+    &.btn-link {
+      font-size: 1.6rem;
+      font-weight: bold;
     }
   }
   .cp-Panel-toggle {
@@ -421,6 +425,9 @@ main {
     &.cp-is-open {
       .fa {
         color: white;
+      }
+      .fa-chevron-down {
+        transform: rotate(180deg);
       }
       &:hover {
         background-color: $select;
@@ -439,12 +446,18 @@ main {
       font-weight: normal;
       font-size: $font-size;
       line-height: $font-size;
+      transition: transform 0.1s linear;
     }
     .fa-times {
       color: red;
     }
     .fa-check {
       color: green;
+    }
+    .fa-chevron-down {
+      font-size: ($font-size * 0.8);
+      margin-right: 1rem;
+      padding: 0;
     }
   }
   h1 {
