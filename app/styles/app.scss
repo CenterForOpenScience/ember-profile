@@ -170,8 +170,8 @@ main {
   text-align: center;
 }
 
-.biography-content textarea{
-  min-height: 100px;
+.editable > textarea {
+  min-height: 10rem;
 }
 
 .activity-content {
