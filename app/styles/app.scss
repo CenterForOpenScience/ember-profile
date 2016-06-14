@@ -51,10 +51,29 @@ main {
 }
 
 #banner {
-  position: relative;
-  height: 300px;
+  height: 30rem;
   background: #166595 url("https://osf.io/static/img/front-page/bg-web.png") no-repeat center top;
   background-size: cover;
+  &:before {
+    display: inline-block;
+    height: 20rem;
+    width: 20rem;
+    content: '';
+    margin: 6rem 2rem 0 4rem;
+    border-radius: 50%;
+    background: white url("https://secure.gravatar.com/avatar/119ccf7175af9a2d1a103b8126667068?d=identicon&s=500") no-repeat center;
+    background-size: cover;
+  }
+
+  #profile-name {
+    display: inline-block;
+    vertical-align: baseline;
+    padding-bottom: 10rem;
+    h1, h4 {
+      margin: 0;
+      color: white;
+    }
+  }
 }
 
 #body-wrapper {
@@ -119,31 +138,6 @@ main {
         background-color: $select;
       }
     }
-  }
-}
-
-#profile-picture {
-  margin-top: -60%;
-  margin-left: -10%;
-  width: 120%;
-  border: 3px solid white;
-  border-radius: 50%;
-  background: white url("https://secure.gravatar.com/avatar/119ccf7175af9a2d1a103b8126667068?d=identicon&s=500") no-repeat center;
-  background-size: cover;
-  &:before {
-    content: '';
-    display: block;
-    margin-top: 100%;
-  }
-}
-
-#profile-name {
-  margin-bottom: 3rem;
-  text-align: center;
-  h1 {
-    padding-top: 1vw;
-    line-height: 1;
-    margin-top: 0;
   }
 }
 

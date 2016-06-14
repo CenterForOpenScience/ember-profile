@@ -1,29 +1,25 @@
 <div id="body-wrapper">
   <div id="body-background">
-    <div id="banner"></div>
+    <div id="banner">
+        <div id="profile-name">
+          <h1>{{model.name}}</h1>
+          <h4>{{model.description}}</h4>
+        </div>
+    </div>
     <nav>
       <ul id="menu-list">
-        <li class="col-md-5">
+        <li class="col-md-6">
           {{#link-to "profile.about" class="col-md-6"}}About{{/link-to}}
           {{#link-to "profile.projects" class="col-md-6"}}Projects{{/link-to}}
 	        <h5>Public Profile: osf.io/dskfb</h5>
         </li>
-        <li class="col-md-2">
-          <div id="profile-picture-wrapper">
-            <div id="profile-picture"></div>
-          </div>
-        </li>
-        <li class="col-md-5">
+        <li class="col-md-6">
           {{#link-to "profile.collaborators" class="col-md-6"}}Collaborators{{/link-to}}
           {{#link-to "profile.activity" class="col-md-6"}}Activity{{/link-to}}
           <button {{action 'toggle'}}>Edit your profile</button>
         </li>
       </ul>
     </nav>
-    <div id="profile-name">
-      <h1>{{model.name}}</h1>
-      <h4>{{model.location}} | {{model.profession}}</h4>
-    </div>
     {{outlet}}
   </div>
 </div>

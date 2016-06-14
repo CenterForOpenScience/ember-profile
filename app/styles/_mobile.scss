@@ -88,12 +88,6 @@
 }
 
 @include media(xl) {
-  #profile-picture {
-    width: 110%;
-    margin-top: -55%;
-    margin-left: -5%;
-    border-width: 5px;
-  }
   .collab-item {
     width: (100% / 3);
   }

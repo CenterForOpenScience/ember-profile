@@ -13,7 +13,8 @@ export default Ember.Route.extend({
       editing: false,
       name: 'John Doe',
       location: 'Charlottesville, VA',
-      profession: 'Developer'
+      profession: 'Developer',
+      description: 'Developer at Charlottesville VA'
     };
   },
   actions: {
