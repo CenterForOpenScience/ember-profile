@@ -2,5 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   elementId: 'collaborators-list',
-  tagName: 'ul'
+  tagName: 'ul',
+  sort: Ember.computed.sort('model', 'sortDefinition'),
+  sortDefinition: ['projects:desc'],
 });

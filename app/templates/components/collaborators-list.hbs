@@ -1,8 +1,8 @@
-{{#each model as |collaborator|}}
+{{#each sort as |collaborator|}}
   <li class="collab-item col-md-6">
     <img src={{collaborator.img}}>
     <div class="collab-text">
-      <h4>{{collaborator.name}} <span class="small-text">({{pluralize collaborator.projects "Project"}})</span></h4>
+      <h4>{{collaborator.firstName}} {{collaborator.lastName}}<span class="small-text">({{pluralize collaborator.projects "Project"}})</span></h4>
       <h5>{{collaborator.location}} | {{collaborator.title}}</h5>
       <ul class="list-inline">
         {{fa-icon "fa-globe" tagName="li" title="Personal Website"}}
