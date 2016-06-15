@@ -1,35 +1,30 @@
 {{#each model as |project|}}
   {{#cp-panel class=(if project.private 'private')}}
     {{#cp-panel-toggle}}
-      <div>
-        <h1 class="{{if project.private 'col-md-10' 'col-md-6'}}">{{fa-icon "chevron-down"}}<b>{{project.name}}</b> ({{project.year}})</h1>
-        {{#if project.private}}
-          <button class="btn btn-default col-md-2">Make Public</button>
-          {{#if project.registered}}
-            {{fa-icon "check" class="col-md-1"}}
-          {{/if}}
-        {{else}}
-          <div class="col-md-2 date-field vert-center"> {{project.created}} </div>
-          <div class="col-md-2 date-field vert-center"> {{project.modified}} </div>
-<!--         <h2 class="col-md-1">{{if project.components project.components.length 0}}</h2> !-->
-<!--          <h2 class="col-md-1">{{if project.collaborators project.collaborators.length 0}}</h2> !-->
-<!--          <h2 class="col-md-1">{{project.stats.files}}</h2> !-->
-          <h2 class="col-md-1">{{project.stats.forks}}</h2>
-          {{#if project.registered}}
-            {{fa-icon "check" class="col-md-1"}}
-          {{else}}
-            {{fa-icon "times" class="col-md-1"}}
-          {{/if}}
+      <h1 class="{{if project.private 'col-md-10' 'col-md-6'}}">{{fa-icon "chevron-down"}}<b>{{project.name}}</b> ({{project.year}})</h1>
+      {{#if project.private}}
+        <button class="btn btn-default col-md-2">Make Public</button>
+        {{#if project.registered}}
+          {{fa-icon "check" class="col-md-1"}}
         {{/if}}
-      </div>
+      {{else}}
+        <h2 class="col-md-2">{{project.created}}</h2>
+        <h2 class="col-md-2">{{project.modified}}</h2>
+        <h2 class="col-md-1">{{project.stats.views}}</h2>
+        {{#if project.registered}}
+          {{fa-icon "check" class="col-md-1"}}
+        {{else}}
+          {{fa-icon "times" class="col-md-1"}}
+        {{/if}}
+      {{/if}}
     {{/cp-panel-toggle}}
-    {{#if project.components}}
-      {{#cp-panel-body}}
-        Contributors: {{project-collaborators project.collaborators}}
+    {{#cp-panel-body}}
+      <h1>Collaborators: {{project-collaborators project.collaborators}}</h1>
+      {{#if project.wiki}}
         <article>
           {{{project.wiki}}}
         </article>
-      {{/cp-panel-body}}
-    {{/if}}
+      {{/if}}
+    {{/cp-panel-body}}
   {{/cp-panel}}
 {{/each}}

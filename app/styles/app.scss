@@ -153,29 +153,6 @@ main {
   font-size: 90%;
 }
 
-.date-field {
-  text-align: center;
-  margin: 0;
-  margin-top: 5px;
-}
-
-.vert-center {
-  height: 44px;
-  line-height: 44px;
-}
-
-.descriptive-list {
-  padding-top: 10px;
-}
-
-.constraint-container {
-  padding-bottom: 10px;
-}
-
-.read-more-body {
-  transition: max-height .7s;  
-}
-
 .no-padding {
   padding: 0;
 }
@@ -318,17 +295,25 @@ main {
     background-color: #F5F5F5;
     border-bottom: #DDD 1px solid;
   }
+  $height: 2rem;
   & > header {
     @extend %clear;
     margin: 0;
     padding: 1rem 0;
     background-color: #F5F5F5;
     border-bottom: #DDD 1px solid;
+    line-height: $height;
     & > h1, & > .fa {
-      font-size: 2rem;
+      font-size: $height;
       margin: 0;
       float: left;
       padding: 0 1rem;
+    }
+    & > h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      margin: 0;
     }
     & > label {
       margin: 0;
@@ -341,8 +326,8 @@ main {
       }
     }
     & > .fa {
-      float: right;
       cursor: pointer;
+      text-align: center;
       transition: color 0.1s linear;
       &:hover {
         color: $select;
@@ -365,11 +350,6 @@ main {
       color: black;
     }
   }
-}
-
-#single-col-indent {
-  padding-left: 5rem;
-  padding-right: 5rem;
 }
 
 #collaborators-list {
@@ -460,13 +440,6 @@ main {
   overflow: scroll;
 }
 
-#projects-detail {
-  padding: 1rem;
-  p {
-    word-break: keep-all;
-  }
-}
-
 #projects-list {
   $font-size: 2rem;
   $warning-stripes: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(red, 0.1) 10px, rgba(red, 0.1) 20px);
@@ -517,13 +490,15 @@ main {
       background-color: $select;
       color: white;
     }
-    h2, .fa {
-      padding: 1rem;
+    & > h2, .fa {
       margin: 0;
+      text-align: center;
       font-weight: normal;
+      font-size: ($font-size * 0.8);
+      line-height: ($font-size * 2);
+    }
+    & > .fa {
       font-size: $font-size;
-      line-height: $font-size;
-      transition: transform 0.1s linear;
     }
     .fa-times {
       color: red;
@@ -532,16 +507,16 @@ main {
       color: green;
     }
     .fa-chevron-down {
-      font-size: ($font-size * 0.8);
       margin-right: 1rem;
       padding: 0;
+      transition: transform 0.1s linear;
     }
   }
   h1 {
-    padding: 1rem;
     margin: 0;
     font-size: ($font-size * 0.8);
     font-weight: normal;
+    line-height: ($font-size * 2);
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -550,7 +525,27 @@ main {
     }
   }
   .cp-Panel-body-inner {
-    padding: 0;
+    padding: 1rem;
+    article {
+      position: relative;
+      max-height: 20rem;
+      overflow: hidden;
+      cursor: pointer;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2rem;
+        background: linear-gradient(to top, rgba(#FFF, 1) 0%, rgba(#FFF, 0) 100%);
+      }
+      * {
+        pointer-events: none;
+        user-select: none;
+      }
+    }
   }
   nav {
     padding: 0;

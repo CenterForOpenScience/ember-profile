@@ -16,8 +16,7 @@ export default Ember.Route.extend({
       collaborators: ['Braswell, E.', 'Ehsan, S.', 'Fairchild, C.', 'Marsh, L.', 'Pfeiffer, N.', 'Spies, J.', 'Swenson, B.', 'Tordoff, J.'],
       year: 2015,
       stats: {
-        files: 12,
-        forks: 0
+        views: 15
       },
       registered: false,
       created: '5/3/2015',
@@ -32,8 +31,7 @@ export default Ember.Route.extend({
       collaborators: ['Braswell, E.', 'Ehsan, S.'],
       year: 2015,
       stats: {
-        files: 12,
-        forks: 0
+        views: 24
       },
       registered: true,
       created: '9/3/2015',
@@ -51,8 +49,7 @@ export default Ember.Route.extend({
       collaborators: ['Marsh, L.'],
       year: 2015,
       stats: {
-        files: 12,
-        forks: 0
+        views: 10
       },
       registered: false,
       created: '8/12/2015',
@@ -63,8 +60,7 @@ export default Ember.Route.extend({
       collaborators: ['Swenson, B.'],
       year: 2015,
       stats: {
-        files: 12,
-        forks: 0
+        views: 91
       },
       registered: false,
       created: '7/23/2015',
@@ -82,8 +78,7 @@ export default Ember.Route.extend({
       collaborators: ['Marsh, L.'],
       year: 2016,
       stats: {
-        files: 12,
-        forks: 0
+        views: 1
       },
       registered: true,
       created: '3/7/2016',
@@ -91,10 +86,6 @@ export default Ember.Route.extend({
     }, {
       name: 'Top Secret Research',
       year: 2000,
-      stats: {
-        files: 14,
-        forks: 0
-      },
       private: true
     }];
   },
