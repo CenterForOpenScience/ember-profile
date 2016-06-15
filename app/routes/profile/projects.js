@@ -13,13 +13,15 @@ export default Ember.Route.extend({
         name: 'Component 2',
         link: 'profile.collaborators'
       }],
-      collaborators: ['Braswell, E.', 'Ehsan, S.', 'Fairchild, C.', 'Marsh, L.', 'Pfeiffer, N.', 'Spies, J.', 'Swenson, B.', 'Tordoff, J.'],
+      collaborators: [{name: 'Braswell, E.'}, {name: 'Ehsan, S.'}, {name: 'Fairchild, C.'}, {name: 'Marsh, L.'}, {name: 'Pfeiffer, N.'}, {name: 'Spies, J.'}, {name: 'Swenson, B.'}, {name: 'Tordoff, J.'}],
       year: 2015,
       stats: {
         files: 12,
         forks: 0
       },
-      registered: false
+      registered: false,
+      created: '5/3/2015',
+      modified: '6/7/2016'
     }, {
       name: 'Causation\'s effect on correlation',
       wiki: wiki,
@@ -27,13 +29,15 @@ export default Ember.Route.extend({
         name: 'Component 1',
         link: 'profile.activity'
       }],
-      collaborators: ['Braswell, E.', 'Ehsan, S.'],
+      collaborators: [{name:'Braswell, E.'}, {name: 'Ehsan, S.'}],
       year: 2015,
       stats: {
         files: 12,
         forks: 0
       },
-      registered: true
+      registered: true,
+      created: '9/3/2015',
+      modified: '2/6/2016'
     }, {
       name: 'Independent study',
       wiki: 'something else!',
@@ -44,23 +48,27 @@ export default Ember.Route.extend({
         name: 'Component 2',
         link: 'profile.about'
       }],
-      collaborators: ['Marsh, L.'],
+      collaborators: [{name: 'Marsh, L.'}],
       year: 2015,
       stats: {
         files: 12,
         forks: 0
       },
-      registered: false
+      registered: false,
+      created: '8/12/2015',
+      modified: '8/12/2015'
     }, {
       name: 'Framework For the Furthering of Initiatives With Regard to Openness Within Science',
       wiki: wiki,
-      collaborators: ['Swenson, B.'],
+      collaborators: [{name: 'Swenson, B.'}],
       year: 2015,
       stats: {
         files: 12,
         forks: 0
       },
-      registered: false
+      registered: false,
+      created: '7/23/2015',
+      modified: '1/10/2016'
     }, {
       name: 'Personal Research',
       wiki: 'something else!',
@@ -71,13 +79,15 @@ export default Ember.Route.extend({
         name: 'Component 2',
         link: 'profile.collaborators'
       }],
-      collaborators: ['Marsh, L.'],
+      collaborators: [{name: 'Marsh, L.'}],
       year: 2016,
       stats: {
         files: 12,
         forks: 0
       },
-      registered: true
+      registered: true,
+      created: '3/7/2016',
+      modified: '5/18/2016'
     }, {
       name: 'Top Secret Research',
       year: 2000,

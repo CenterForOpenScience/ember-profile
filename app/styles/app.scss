@@ -153,6 +153,29 @@ main {
   font-size: 90%;
 }
 
+.date-field {
+  text-align: center;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.vert-center {
+  height: 44px;
+  line-height: 44px;
+}
+
+.descriptive-list {
+  padding-top: 10px;
+}
+
+.constraint-container {
+  padding-bottom: 10px;
+}
+
+.read-more-body {
+  transition: max-height .7s;  
+}
+
 .no-padding {
   padding: 0;
 }
@@ -210,6 +233,10 @@ main {
     height: inherit;
     line-height: inherit;
   }
+}
+
+.paragraph-container {
+  white-space: initial;
 }
 
 .activity-content {
@@ -435,7 +462,7 @@ main {
 
 #projects-list {
   $font-size: 2rem;
-  $warning-stripes: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(red, 0.4) 10px, rgba(red, 0.4) 20px);
+  $warning-stripes: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(red, 0.1) 10px, rgba(red, 0.1) 20px);
   .cp-Panel {
     border: 1px #DDD;
     border-style: none none solid;
