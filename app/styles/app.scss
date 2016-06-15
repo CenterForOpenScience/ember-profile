@@ -141,6 +141,14 @@ main {
   }
 }
 
+#social-box {
+  a {
+    display: block;
+    font-size: 2rem;
+    transition: color 0.1s linear;
+  }
+}
+
 .small-text {
   font-size: 90%;
 }

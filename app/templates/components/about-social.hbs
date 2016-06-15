@@ -1,9 +1,7 @@
 <div id="social-box">
 	{{#each model as |social|}}
     {{#if social.name}}
-	    <a href="{{social.link}}">
-        <h4 href="{{social.link}}" class="no-margins"><button class="btn btn-link">{{fa-icon social.icon}}</button> {{social.name}}</h4>
-      </a>
+	    <a href="{{social.link}}" title="{{social.site}}">{{fa-icon (social-icon social.site) size=2}} {{social.name}}</a>
     {{/if}}
 	{{/each}}
 </div>
