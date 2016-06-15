@@ -7,7 +7,10 @@
       </div>
     </div>
     <div class="profile-box">
-      <h1>Social</h1>
+      <header>
+        <h1>Social</h1>
+        {{fa-icon "plus-square" size=2 click=(route-action "add" "social")}}
+      </header>
       <div class="profile-content">
         {{#about-social model=model.social}}{{/about-social}}
       </div>
@@ -15,19 +18,28 @@
   </section>
   <section class="col-md-6">
     <div class="profile-box">
-      <h1>Employment</h1>
+      <header>
+        <h1>Employment</h1>
+        {{fa-icon "plus-square" size=2 click=(route-action "add" "employment")}}
+      </header>
       <div class="profile-content no-padding">
         {{#about-employment model=model.employment}}{{/about-employment}}
       </div>
     </div>
     <div class="profile-box">
-      <h1>Education</h1>
+      <header>
+        <h1>Education</h1>
+        {{fa-icon "plus-square" size=2 click=(route-action "add" "education")}}
+      </header>
       <div class="profile-content no-padding">
         {{#about-education model=model.education}}{{/about-education}}
       </div>
     </div>
     <div class="profile-box">
-      <h1>Uploads <button id="file-upload" class="btn btn-link btn-upload" {{action 'show_modal'}}>{{fa-icon "plus-square" size=2}}</button></h1>
+      <header>
+        <h1>Uploads</h1>
+        {{fa-icon "plus-square" size=2 click=(route-action "showModal")}}
+      </header>
       <div class="profile-content no-padding">
         {{#about-uploads model=model.uploads}}{{/about-uploads}}
     </div>

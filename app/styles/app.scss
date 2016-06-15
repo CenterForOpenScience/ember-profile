@@ -184,10 +184,9 @@ main {
   margin: 0;
 }
 
-.btn-upload {
+#file-upload {
   padding: 0;
   margin: 0;
-  display: none;
   color: dimgrey;
   float: right;
 }
@@ -339,6 +338,14 @@ main {
       & > select {
         margin-left: .5rem;
         font-size: 2rem;
+      }
+    }
+    & > .fa {
+      float: right;
+      cursor: pointer;
+      transition: color 0.1s linear;
+      &:hover {
+        color: $select;
       }
     }
   }

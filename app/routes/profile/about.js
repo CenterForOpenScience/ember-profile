@@ -69,7 +69,10 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    show_modal() {
+    add(type) {
+      this.get(`currentModel.${type}`).pushObject({});
+    },
+    showModal() {
       Ember.$('#uploadModal').modal('show');
     }
   }
