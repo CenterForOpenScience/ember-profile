@@ -1,8 +1,8 @@
 {{#each model as |employer|}}
   <li>
-    <h4 class="editable">{{employer.name}}</h4>
-    <h5 class="editable">{{employer.dates}}</h5>
-    <h5 class="editable">{{employer.title}}</h5>
-    <h5 class="editable">{{employer.location}}</h5>
+    {{#edit-field text=employer.name tagName="h4"}}{{/edit-field}}
+    {{#edit-field text=employer.dates tagName="h5"}}{{/edit-field}}
+    {{#edit-field text=employer.title tagName="h5"}}{{/edit-field}}
+    {{#edit-field text=employer.location tagName="h5"}}{{/edit-field}}
   </li>
 {{/each}}

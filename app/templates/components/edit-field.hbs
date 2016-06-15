@@ -1,0 +1,17 @@
+{{#if isEditing}}
+  <form class="{{unless area 'inline'}}" {{action "submit" on="submit"}}>
+    {{#if area}}
+      {{textarea class="form-control" value=text autofocus=true placeholder="Enter to submit"}}
+    {{else}}
+      {{input class="form-control" value=text autofocus=true placeholder="Enter to submit"}}
+    {{/if}}
+  </form>
+{{else}}
+  <span {{action "startEditing"}} title="Click to Edit">
+    {{#if text}}
+      {{text}}
+    {{else}}
+      <i>Click to edit {{if name name}}</i>
+    {{/if}}
+  </span>
+{{/if}}

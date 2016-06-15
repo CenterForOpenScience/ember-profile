@@ -4,7 +4,7 @@ export default Ember.Route.extend({
   model() {
     return {
       personal: {
-        bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        bio: 'Quorum dimsum color sat allmet, consecutive alipsync elite, said do softmod tempor incident ut labor et colore magna carta. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eat comodo kumquat. Duis aute irure color in reprehenderit in voluptuous velit esse cillum dolore eu fugiat nulla pariatur. Excalibeur isnt occaecat cupidatat non prudent, sunt in culpa qui official deserunt molly anim id est laborum.',
         phone: '(123) 456-7890',
         join_date: '5-16-2016'
       },

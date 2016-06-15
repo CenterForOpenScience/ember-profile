@@ -166,8 +166,42 @@ main {
   text-align: center;
 }
 
-.editable > textarea {
-  min-height: 10rem;
+.editable {
+  span {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    transition: color 0.1s linear;
+    &:before {
+      position: absolute;
+      display: block;
+      left: -.5rem;
+      right: -.5rem;
+      top: -.5rem;
+      bottom: -.5rem;
+      content: '';
+      z-index: -1;
+      border-radius: 5px;
+      transition: background-color 0.1s linear;
+    }
+    &:hover {
+      color: black;
+      &:before {
+        background-color: $hover;
+      }
+    }
+  }
+  form.inline {
+    display: inline-block;
+  }
+  textarea {
+    min-height: 10rem;
+  }
+  input {
+    font-size: inherit;
+    height: inherit;
+    line-height: inherit;
+  }
 }
 
 .activity-content {
@@ -356,7 +390,7 @@ main {
       transition: background-color 0.1s linear;
       &:hover {
       }
-      :first-child {
+      & > :first-child {
         color: #2E2E2E;
         font-size: 16px;
         font-weight: bold;
@@ -364,12 +398,12 @@ main {
         margin-bottom: 0;
         float: left;
       }
-      :nth-child(2), :nth-child(4) {
+      & > :nth-child(2), & > :nth-child(4) {
         float: right;
         font-size: 14px;
         margin-bottom: 0;
       }
-      :nth-child(3) {
+      & > :nth-child(3) {
         clear: both;
         float: left;
         font-size: 14px;

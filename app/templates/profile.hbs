@@ -2,8 +2,8 @@
   <div id="body-background">
     <div id="banner">
         <div id="profile-name">
-          <h1>{{model.name}}</h1>
-          <h4>{{model.description}}</h4>
+          {{#edit-field text=model.name tagName="h1" name="name"}}{{/edit-field}}
+          {{#edit-field text=model.description tagName="h4" name="description"}}{{/edit-field}}
         </div>
     </div>
     <nav>
