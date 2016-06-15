@@ -13,7 +13,7 @@ export default Ember.Route.extend({
         name: 'Component 2',
         link: 'profile.collaborators'
       }],
-      collaborators: [{name: 'Braswell, E.'}, {name: 'Ehsan, S.'}, {name: 'Fairchild, C.'}, {name: 'Marsh, L.'}, {name: 'Pfeiffer, N.'}, {name: 'Spies, J.'}, {name: 'Swenson, B.'}, {name: 'Tordoff, J.'}],
+      collaborators: ['Braswell, E.', 'Ehsan, S.', 'Fairchild, C.', 'Marsh, L.', 'Pfeiffer, N.', 'Spies, J.', 'Swenson, B.', 'Tordoff, J.'],
       year: 2015,
       stats: {
         files: 12,
@@ -29,7 +29,7 @@ export default Ember.Route.extend({
         name: 'Component 1',
         link: 'profile.activity'
       }],
-      collaborators: [{name:'Braswell, E.'}, {name: 'Ehsan, S.'}],
+      collaborators: ['Braswell, E.', 'Ehsan, S.'],
       year: 2015,
       stats: {
         files: 12,
@@ -48,7 +48,7 @@ export default Ember.Route.extend({
         name: 'Component 2',
         link: 'profile.about'
       }],
-      collaborators: [{name: 'Marsh, L.'}],
+      collaborators: ['Marsh, L.'],
       year: 2015,
       stats: {
         files: 12,
@@ -60,7 +60,7 @@ export default Ember.Route.extend({
     }, {
       name: 'Framework For the Furthering of Initiatives With Regard to Openness Within Science',
       wiki: wiki,
-      collaborators: [{name: 'Swenson, B.'}],
+      collaborators: ['Swenson, B.'],
       year: 2015,
       stats: {
         files: 12,
@@ -79,7 +79,7 @@ export default Ember.Route.extend({
         name: 'Component 2',
         link: 'profile.collaborators'
       }],
-      collaborators: [{name: 'Marsh, L.'}],
+      collaborators: ['Marsh, L.'],
       year: 2016,
       stats: {
         files: 12,

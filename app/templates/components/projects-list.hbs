@@ -25,21 +25,10 @@
     {{/cp-panel-toggle}}
     {{#if project.components}}
       {{#cp-panel-body}}
-        <div class="col-md-12 descriptive-list"> <a href="/profile/collaborators">Contributors:</a> 
-        {{#each project.collaborators as |collaborator|}}
-          <a>{{collaborator.name}}, </a>
-        {{/each}}
-        </div>
-
-        <div class="col-md-12 descriptive-list constraint-container">
-          <div class="paragraph-container"> {{#read-more maxHeight='150px'}}{{{project.wiki}}}{{/read-more}} </div>
-        </div>
-<!--        <nav>
-          {{#each project.components as |component|}}
-            {{#link-to component.link}}{{component.name}}{{/link-to}}
-          {{/each}}
-        </nav>
-!-->
+        Contributors: {{project-collaborators project.collaborators}}
+        <article>
+          {{{project.wiki}}}
+        </article>
       {{/cp-panel-body}}
     {{/if}}
   {{/cp-panel}}
