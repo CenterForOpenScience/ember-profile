@@ -97,11 +97,11 @@ img {
 }
 
 #navbarScope {
-  top: 0px;
+  top: 0;
   transition: top 0.3s ease-in-out;
 }
 
-#navbarScope a {
+#navbarScope .nav > li > a {
   color: #FFF;
 }
 

@@ -14,11 +14,11 @@ export default Ember.Component.extend({
           return false;
         }
       }).blur(() => {
-        this.send('cancel');
+        form.submit();
       });
     } else {
       form.find('input').blur(() => {
-        this.send('cancel');
+        form.submit();
       });
     }
   },

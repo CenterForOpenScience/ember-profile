@@ -1,8 +1,11 @@
 <div id="about-personal">
   {{#edit-field text=model.bio tagName="p" area=true name="bio"}}{{/edit-field}}
-  <aside>
-    <p><b>Phone:</b> {{edit-field text=model.phone tagName="span"}}</p>
-    <p><b>Member since:</b> {{model.join_date}}</p>
-  </aside>
-  <div href="" class="no-margins"><button class="btn btn-link">{{fa-icon "envelope" size=3}}</button></div>
+  <dl class="dl-horizontal">
+    <dt>Phone:</dt>
+    <dd>{{edit-field text=model.phone tagName="span"}}</dd>
+    <dt>Email:</dt>
+    <dd>{{edit-field text=(email-unscramble model.email model.join_date) tagName="span"}}</dd>
+    <dt>Member since:</dt>
+    <dd>{{model.join_date}}</dd>
+  </dl>
 </div>

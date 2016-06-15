@@ -6,7 +6,8 @@ export default Ember.Route.extend({
       personal: {
         bio: 'Quorum dimsum color sat allmet, consecutive alipsync elite, said do softmod tempor incident ut labor et colore magna carta. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex eat comodo kumquat. Duis aute irure color in reprehenderit in voluptuous velit esse cillum dolore eu fugiat nulla pariatur. Excalibeur isnt occaecat cupidatat non prudent, sunt in culpa qui official deserunt molly anim id est laborum.',
         phone: '(123) 456-7890',
-        join_date: '5-16-2016'
+        join_date: '5-16-2016',
+        email: 'PCRDTBDTRuH\\WD^RYX'
       },
       social: [{
         name: 'johnDoe45',
