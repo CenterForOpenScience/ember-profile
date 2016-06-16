@@ -18,9 +18,11 @@ export default Ember.Route.extend({
       stats: {
         views: 15
       },
-      registered: false,
-      created: '5/3/2015',
-      modified: '6/7/2016'
+      attributes: {
+        registered: false,
+        created: '5/3/2015',
+        modified: '6/7/2016'
+      },
     }, {
       name: 'Causation\'s effect on correlation',
       wiki: wiki,
@@ -33,9 +35,11 @@ export default Ember.Route.extend({
       stats: {
         views: 24
       },
+      attributes: {
       registered: true,
-      created: '9/3/2015',
-      modified: '2/6/2016'
+      created: '9/3/2016',
+      modified: '2/6/2016',
+      },
     }, {
       name: 'Independent study',
       wiki: 'something else!',
@@ -51,9 +55,11 @@ export default Ember.Route.extend({
       stats: {
         views: 10
       },
+      attributes: {
       registered: false,
       created: '8/12/2015',
-      modified: '8/12/2015'
+      modified: '8/12/2015',
+    },
     }, {
       name: 'Framework For the Furthering of Initiatives With Regard to Openness Within Science',
       wiki: wiki,
@@ -62,9 +68,11 @@ export default Ember.Route.extend({
       stats: {
         views: 91
       },
+      attributes: {
       registered: false,
       created: '7/23/2015',
-      modified: '1/10/2016'
+      modified: '1/10/2016',
+      },
     }, {
       name: 'Personal Research',
       wiki: 'something else!',
@@ -80,9 +88,11 @@ export default Ember.Route.extend({
       stats: {
         views: 1
       },
+      attributes: {
       registered: true,
       created: '3/7/2016',
-      modified: '5/18/2016'
+      modified: '5/18/2016',
+    },
     }, {
       name: 'Top Secret Research',
       year: 2000,

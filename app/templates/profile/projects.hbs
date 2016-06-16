@@ -2,14 +2,14 @@
   <section class="full">
     <div class="profile-box">
       <header>
-        <h1 class="col-md-6">Projects</h1>
-        <h2 class="col-md-2">Date Created</h2>
-        <h2 class="col-md-2">Last Modified</h2>
-        <h2 class="col-md-1">Views</h2>
-        <h2 class="col-md-1.75">Registered</h2>
+        <h1 class="col-md-6" onclick={{action 'projectSort' 'name'}}>Projects</h1>
+        <h2 class="col-md-2" onclick={{action 'projectSort' 'attributes.created'}}>Date Created</h2>
+        <h2 class="col-md-2" onclick={{action 'projectSort' 'attributes.modified'}}>Last Modified</h2>
+        <h2 class="col-md-1" onclick={{action 'projectSort' 'stats.views'}}>Views</h2>
+        <h2 class="col-md-1.75" onclick={{action 'projectSort' 'attributes.registered'}}>Registered</h2>
       </header>
       <div class="profile-content no-padding">
-        {{#projects-list model=model}}{{/projects-list}}
+        {{#projects-list model=model sortDefinition=sort}}{{/projects-list}}
       </div>
     </div>
   </section>
