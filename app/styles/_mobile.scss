@@ -38,6 +38,23 @@
       border-bottom: none;
     }
   }
+  #profile-projects .profile-box {
+    header h2, header .fa {
+      display: none;
+    }
+  }
+  #projects-list {
+    .cp-Panel-toggle {
+      h2, & > .fa, & > button {
+        display: none;
+      }
+    }
+    .cp-Panel-body-inner {
+      & h1 i {
+        white-space: normal;
+      }
+    }
+  }
   #collaborators-list {
     $item-height: 7rem;
     max-height: none;
