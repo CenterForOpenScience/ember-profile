@@ -284,13 +284,13 @@ main {
     }
     & > label {
       margin: 0;
-      vertical-align: text-bottom;
       float: right;
-      padding: 0 1rem;
-      & > select {
-        margin-left: .5rem;
-        font-size: $height;
-      }
+      font-size: ($height * 0.8);
+    }
+    & > select {
+      float: right;
+      margin: 0 1rem;
+      font-size: $height;
     }
     & > .fa {
       cursor: pointer;
