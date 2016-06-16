@@ -2,9 +2,9 @@
   {{#edit-field text=model.bio tagName="p" area=true name="bio"}}{{/edit-field}}
   <dl class="dl-horizontal">
     <dt>Phone:</dt>
-    <dd>{{edit-field text=model.phone tagName="span"}}</dd>
+    <dd>{{edit-field text=model.phone tagName="span" name="phone"}}</dd>
     <dt>Email:</dt>
-    <dd>{{edit-field text=(email-unscramble model.email model.join_date) tagName="span"}}</dd>
+    <dd>{{edit-field text=(email-unscramble model.email model.join_date) tagName="span" name="email"}}</dd>
     <dt>Member since:</dt>
     <dd>{{model.join_date}}</dd>
   </dl>

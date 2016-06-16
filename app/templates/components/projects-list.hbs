@@ -1,7 +1,14 @@
 {{#each model as |project|}}
   {{#cp-panel class=(if project.private 'private')}}
     {{#cp-panel-toggle}}
-      <h1 class="{{if project.private 'col-md-10' 'col-md-6'}}">{{fa-icon "chevron-down"}}<b>{{project.name}}</b> ({{project.year}})</h1>
+      <h1 class="{{if project.private 'col-md-10' 'col-md-6'}}">
+        {{#if project.private}}
+          {{fa-icon "warning"}}
+        {{else}}
+          {{fa-icon "chevron-down"}}
+        {{/if}}
+        <b>{{project.name}}</b> ({{project.year}})
+      </h1>
       {{#if project.private}}
         <button class="btn btn-default col-md-2">Make Public</button>
         {{#if project.registered}}
@@ -19,11 +26,15 @@
       {{/if}}
     {{/cp-panel-toggle}}
     {{#cp-panel-body}}
-      <h1>Collaborators: {{project-collaborators project.collaborators}}</h1>
-      {{#if project.wiki}}
-        <article>
-          {{{project.wiki}}}
-        </article>
+      {{#if project.private}}
+        <h1><i>This project is only visible to you. Make this project public to enable analytics.</i></h1>
+      {{else}}
+        <h1>Collaborators: {{project-collaborators project.collaborators}}</h1>
+        {{#if project.wiki}}
+          <article>
+            {{{project.wiki}}}
+          </article>
+        {{/if}}
       {{/if}}
     {{/cp-panel-body}}
   {{/cp-panel}}

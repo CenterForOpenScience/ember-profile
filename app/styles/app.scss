@@ -37,7 +37,7 @@ footer {
 main {
   @extend %clear;
   section.col-md-6 {
-    padding: 0 2rem 2rem;
+    padding: 2rem;
   }
   section:first-child {
     padding-right: 1rem;
@@ -46,11 +46,12 @@ main {
     padding-left: 1rem;
   }
   section.full {
-    padding: 0 2rem 2rem 2rem;
+    padding: 2rem;
   }
 }
 
 #banner {
+  @extend %clear;
   height: 30rem;
   background: #166595 url("https://osf.io/static/img/front-page/bg-web.png") no-repeat center top;
   background-size: cover;
@@ -73,6 +74,11 @@ main {
       margin: 0;
       color: white;
     }
+  }
+  & > h5 {
+    float: right;
+    margin: 6rem 4rem 0 0;
+    color: white;
   }
 }
 
@@ -98,45 +104,23 @@ main {
   list-style: none;
   margin: 0;
   padding: 0;
-  & > li {
-    //@extend %clear;
-    padding: 0;
-    margin: 0;
-    h5 {
-      padding: 1rem;
-      margin: 0;
-      clear: left;
+  & > a {
+    display: inline-block;
+    background-color: $blue;
+    line-height: 5rem;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    transition: background-color 0.1s linear;
+    &:hover {
+      background-color: $select;
+      text-decoration: none;
     }
-    button {
-      float: right;
-      margin: 1rem;
-      padding: 0.5rem 1rem;
-      clear: left;
+    &:active {
+      background-color: darken($select, 10%);
     }
-  }
-
-  li {
-    &:nth-child(2) {
-      z-index: 3;
-    }
-    a {
-      display: inline-block;
-      background-color: $blue;
-      line-height: 5rem;
-      font-size: 2rem;
-      text-align: center;
-      color: white;
-      transition: background-color 0.1s linear;
-      &:hover {
-        background-color: $select;
-        text-decoration: none;
-      }
-      &:active {
-        background-color: darken($select, 10%);
-      }
-      &.active {
-        background-color: $select;
-      }
+    &.active {
+      background-color: $select;
     }
   }
 }
@@ -288,21 +272,24 @@ main {
   &:not(:last-child) {
     margin-bottom: 2rem;
   }
+  $height: 2rem;
   & > h1 {
     padding: 1rem;
     margin: 0;
-    font-size: 2rem;
+    font-size: $height;
+    line-height: $height;
     background-color: #F5F5F5;
     border-bottom: #DDD 1px solid;
   }
-  $height: 2rem;
   & > header {
     @extend %clear;
     margin: 0;
     padding: 1rem 0;
     background-color: #F5F5F5;
     border-bottom: #DDD 1px solid;
-    line-height: $height;
+    & > * {
+      line-height: $height;
+    }
     & > h1, & > .fa {
       font-size: $height;
       margin: 0;
@@ -312,7 +299,6 @@ main {
     & > h2 {
       text-align: center;
       font-size: 1.5rem;
-      line-height: 2rem;
       margin: 0;
     }
     & > label {
@@ -322,7 +308,7 @@ main {
       padding: 0 1rem;
       & > select {
         margin-left: .5rem;
-        font-size: 2rem;
+        font-size: $height;
       }
     }
     & > .fa {
@@ -433,6 +419,11 @@ main {
       }
     }
   }
+  .profile-box header {
+    .fa {
+      float: right;
+    }
+  }
 }
 
 .projects-panel {
@@ -442,19 +433,14 @@ main {
 
 #projects-list {
   $font-size: 2rem;
-  $warning-stripes: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(red, 0.1) 10px, rgba(red, 0.1) 20px);
   .cp-Panel {
     border: 1px #DDD;
     border-style: none none solid;
     &.private {
-      //border: dotted red 1px;
       .cp-Panel-toggle {
-        background: $warning-stripes;
-        &:hover {
-          background: $warning-stripes, $hover;
-        }
+        color: rgba(black, 0.7);
         &:active, &.cp-is-open {
-          background: $warning-stripes, $select;
+          color: white;
         }
       }
     }
@@ -496,17 +482,18 @@ main {
       font-weight: normal;
       font-size: ($font-size * 0.8);
       line-height: ($font-size * 2);
+      transition: color 0.1s linear;
     }
     & > .fa {
       font-size: $font-size;
     }
-    .fa-times {
+    .fa-times, .fa-warning {
       color: red;
     }
     .fa-check {
       color: green;
     }
-    .fa-chevron-down {
+    .fa-chevron-down, .fa-warning {
       margin-right: 1rem;
       padding: 0;
       transition: transform 0.1s linear;

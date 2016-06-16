@@ -1,23 +1,19 @@
 <div id="body-wrapper">
   <div id="body-background">
     <div id="banner">
-        <div id="profile-name">
-          {{#edit-field text=model.name tagName="h1" name="name"}}{{/edit-field}}
-          {{#edit-field text=model.description tagName="h4" name="description"}}{{/edit-field}}
-        </div>
+      <div id="profile-name">
+        {{#edit-field text=model.name tagName="h1" name="name"}}{{/edit-field}}
+        {{#edit-field text=model.description tagName="h4" name="description"}}{{/edit-field}}
+      </div>
+	    <h5>Public Profile: osf.io/dskfb</h5>
     </div>
     <nav>
-      <ul id="menu-list">
-        <li class="col-md-6">
-          {{#link-to "profile.about" class="col-md-6"}}About{{/link-to}}
-          {{#link-to "profile.projects" class="col-md-6"}}Projects{{/link-to}}
-	        <h5>Public Profile: osf.io/dskfb</h5>
-        </li>
-        <li class="col-md-6">
-          {{#link-to "profile.collaborators" class="col-md-6"}}Collaborators{{/link-to}}
-          {{#link-to "profile.activity" class="col-md-6"}}Activity{{/link-to}}
-        </li>
-      </ul>
+      <nav id="menu-list">
+        {{#link-to "profile.about" class="col-md-3"}}About{{/link-to}}
+        {{#link-to "profile.projects" class="col-md-3"}}Projects{{/link-to}}
+        {{#link-to "profile.collaborators" class="col-md-3"}}Collaborators{{/link-to}}
+        {{#link-to "profile.activity" class="col-md-3"}}Activity{{/link-to}}
+      </nav>
     </nav>
     {{outlet}}
   </div>

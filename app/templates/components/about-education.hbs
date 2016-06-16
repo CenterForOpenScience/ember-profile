@@ -1,8 +1,8 @@
 {{#each model as |educator|}}
   <li>
-    {{#edit-field text=educator.name tagName="h4"}}{{/edit-field}}
-    {{#edit-field text=educator.dates tagName="h5"}}{{/edit-field}}
-    {{#edit-field text=educator.degree tagName="h5"}}{{/edit-field}}
-    {{#edit-field text=educator.location tagName="h5"}}{{/edit-field}}
+    {{#edit-field text=educator.name tagName="h4" name="school"}}{{/edit-field}}
+    {{#edit-field text=educator.dates tagName="h5" name="dates"}}{{/edit-field}}
+    {{#edit-field text=educator.degree tagName="h5" name="degree"}}{{/edit-field}}
+    {{#edit-field text=educator.location tagName="h5" name="location"}}{{/edit-field}}
   </li>
 {{/each}}
