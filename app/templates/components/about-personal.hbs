@@ -1,11 +1,9 @@
-<div id="about-personal">
-  {{#edit-field text=model.bio tagName="p" area=true name="bio"}}{{/edit-field}}
-  <dl class="dl-horizontal">
-    <dt>Phone:</dt>
-    <dd>{{edit-field text=model.phone tagName="span" name="phone"}}</dd>
-    <dt>Email:</dt>
-    <dd>{{edit-field text=(email-unscramble model.email model.join_date) tagName="span" name="email"}}</dd>
-    <dt>Member since:</dt>
-    <dd>{{model.join_date}}</dd>
-  </dl>
-</div>
+{{#edit-field text=model.bio tagName="p" area=true name="bio" callback=(route-action "save" "personal")}}{{/edit-field}}
+<dl class="dl-horizontal">
+  <dt>Phone:</dt>
+  <dd>{{edit-field text=model.phone tagName="span" name="phone" callback=(route-action "save" "personal")}}</dd>
+  <dt>Email:</dt>
+  <dd>{{edit-field text=(email-unscramble model.email model.join_date) tagName="span" name="email" callback=(route-action "save" "personal")}}</dd>
+  <dt>Member since:</dt>
+  <dd>{{model.join_date}}</dd>
+</dl>

@@ -64,16 +64,23 @@ export default Ember.Route.extend({
         dates: 'August 2015 – May 2017',
         location: 'Blacksburg, VA'
       }],
-      uploads: [{}]
+      uploads: []
     };
   },
 
   actions: {
     add(type) {
-      this.get(`currentModel.${type}`).pushObject({});
+      if (type === 'upload') {
+        Ember.$('#uploadModal').modal('show');
+      } else {
+        this.get(`currentModel.${type}`).pushObject({});
+	    }
     },
-    showModal() {
-      Ember.$('#uploadModal').modal('show');
+    save(category, field, value) {
+      this.set(`currentModel.${category}.${field}`, value);
+    },
+    saveItem(category, index, field, value) {
+      this.get(`currentModel.${category}`)[index][field] = value;
     }
   }
 });

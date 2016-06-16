@@ -1,42 +1,38 @@
-<div id="uploads-box">
-	{{#each model as |upload|}}
-    {{#if upload.name}}
-	    <a href="{{upload.link}}">
-        <h4 href="{{upload.link}}" class="no-margins"><button class="btn btn-link">{{fa-icon upload.icon}}</button> {{upload.name}}</h4>
-      </a>
-    {{else}}
-    	<p class="empty-message"><i>
-    		There doesn't seem to be anything here.  
-    	</i></p>
-    {{/if}}
-	{{/each}}
-	<!-- Modal -->
-	<div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Upload File</h4>
-	      </div>
-	      <div class="modal-body form-horizontal">
-			  <div class="form-group">
-			    <label for="file" class="col-sm-2 control-label">File</label>
-			    <div class="col-sm-10">
-			      <input type="file" class="form-control" id="file" />
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label for="name" class="col-sm-2 control-label">File Name</label>
-			    <div class="col-sm-10">
-			      <input type="name" class="form-control" id="name" />
-			    </div>
-			  </div>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary" {{action "save_upload"}} >Save changes</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
+{{#each model as |upload|}}
+  <a href="{{upload.link}}">
+    {{fa-icon "cloud-upload" size=2}} {{upload.name}}
+  </a>
+{{else}}
+  <p><i>
+    There doesn't seem to be anything here.
+  </i></p>
+{{/each}}
+<!-- Modal -->
+<div class="modal fade" id="uploadModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Upload File</h4>
+      </div>
+      <div class="modal-body form-horizontal">
+        <div class="form-group">
+          <label for="about-uploads-file" class="col-sm-2 control-label">File</label>
+          <div class="col-sm-10">
+            <input type="file" class="form-control" id="about-uploads-file" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="about-uploads-name" class="col-sm-2 control-label">File Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="about-uploads-name" />
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" {{action "saveUpload"}} data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>

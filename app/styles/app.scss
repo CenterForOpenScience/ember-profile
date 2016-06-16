@@ -128,14 +128,6 @@ main {
   }
 }
 
-#social-box {
-  a {
-    display: block;
-    font-size: 2rem;
-    transition: color 0.1s linear;
-  }
-}
-
 .small-text {
   font-size: 90%;
 }
@@ -146,18 +138,6 @@ main {
 
 .no-margins {
   margin: 0;
-}
-
-#file-upload {
-  padding: 0;
-  margin: 0;
-  color: dimgrey;
-  float: right;
-}
-
-.empty-message {
-  margin-top: 10px;
-  text-align: center;
 }
 
 .editable {
@@ -198,10 +178,6 @@ main {
     height: inherit;
     line-height: inherit;
   }
-}
-
-.paragraph-container {
-  white-space: initial;
 }
 
 .activity-content {
@@ -340,6 +316,22 @@ main {
     i {
       color: black;
     }
+  }
+}
+
+#about-social {
+  a {
+    display: block;
+    font-size: 2rem;
+    transition: color 0.1s linear;
+  }
+}
+
+#about-uploads {
+  @extend #about-social;
+  p {
+    padding-top: 1rem;
+    text-align: center;
   }
 }
 

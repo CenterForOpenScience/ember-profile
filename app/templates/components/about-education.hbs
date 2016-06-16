@@ -1,8 +1,8 @@
-{{#each model as |educator|}}
+{{#each model as |educator index|}}
   <li>
-    {{#edit-field text=educator.name tagName="h4" name="school"}}{{/edit-field}}
-    {{#edit-field text=educator.dates tagName="h5" name="dates"}}{{/edit-field}}
-    {{#edit-field text=educator.degree tagName="h5" name="degree"}}{{/edit-field}}
-    {{#edit-field text=educator.location tagName="h5" name="location"}}{{/edit-field}}
+    {{#edit-field text=educator.name tagName="h4" name="school" callback=(route-action "saveItem" "education" index)}}{{/edit-field}}
+    {{#edit-field text=educator.dates tagName="h5" name="dates" callback=(route-action "saveItem" "education" index)}}{{/edit-field}}
+    {{#edit-field text=educator.degree tagName="h5" name="degree" callback=(route-action "saveItem" "education" index)}}{{/edit-field}}
+    {{#edit-field text=educator.location tagName="h5" name="location" callback=(route-action "saveItem" "education" index)}}{{/edit-field}}
   </li>
 {{/each}}

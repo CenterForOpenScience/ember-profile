@@ -1,22 +1,19 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  elementId: 'about-uploads',
 	actions: {
-		save_upload() {
-			const parent = Ember.$('#uploads-box');
-			const file = Ember.$('#file').val();
-			const file_name = Ember.$('#name').val();
-			var empty_message = Ember.$('.empty-message');
+		saveUpload() {
+			const file = this.$().find('#about-uploads-file');
+			const fileName = this.$().find('#about-uploads-name');
 
-      		Ember.$('#uploadModal').modal('hide');
-      		if(empty_message !== ''){
-      			Ember.$('.empty-message').empty();
-      		}
-      		var new_link = '<a href="'+ file +'"><h4 href="' + file + '" class="no-margins"><button class="btn btn-link"><i class="fa fa-cloud-upload fa-3x" /></button> ' + file_name +'</h4></a>';
-      		parent.append(new_link);
+      this.get('model').pushObject({
+        name: fileName.val(),
+        link: file.val()
+      });
 
-      		Ember.$('#file').val('');
-      		Ember.$('#name').val('');
-    	}
+      file.val('');
+      fileName.val('');
+    }
 	}
 });

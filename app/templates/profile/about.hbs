@@ -38,11 +38,11 @@
     <div class="profile-box">
       <header>
         <h1>Uploads</h1>
-        {{fa-icon "plus-square" size=2 click=(route-action "showModal")}}
+        {{fa-icon "plus-square" size=2 click=(route-action "add" "upload")}}
       </header>
-      <div class="profile-content no-padding">
+      <div class="profile-content">
         {{#about-uploads model=model.uploads}}{{/about-uploads}}
-    </div>
+      </div>
     </div>
   </section>
 </main>

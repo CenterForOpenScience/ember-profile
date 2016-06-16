@@ -1,8 +1,8 @@
 {{#each model as |employer|}}
   <li>
-    {{#edit-field text=employer.name tagName="h4" name="employer"}}{{/edit-field}}
-    {{#edit-field text=employer.dates tagName="h5" name="dates"}}{{/edit-field}}
-    {{#edit-field text=employer.title tagName="h5" name="position"}}{{/edit-field}}
-    {{#edit-field text=employer.location tagName="h5" name="location"}}{{/edit-field}}
+    {{#edit-field text=employer.name tagName="h4" name="employer" callback=(route-action "saveItem" "employment" index)}}{{/edit-field}}
+    {{#edit-field text=employer.dates tagName="h5" name="dates" callback=(route-action "saveItem" "employment" index)}}{{/edit-field}}
+    {{#edit-field text=employer.title tagName="h5" name="position" callback=(route-action "saveItem" "employment" index)}}{{/edit-field}}
+    {{#edit-field text=employer.location tagName="h5" name="location" callback=(route-action "saveItem" "employment" index)}}{{/edit-field}}
   </li>
 {{/each}}

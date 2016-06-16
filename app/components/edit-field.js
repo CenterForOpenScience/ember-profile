@@ -33,6 +33,9 @@ export default Ember.Component.extend({
       if (this.get('isEditing')) {
         this.set('isEditing', false);
         this.set('text', this.get('text').trim());
+	      if (this.get('callback')) {
+          this.get('callback')(this.get('name'), this.get('text'));
+        }
       }
     },
     cancel() {
