@@ -52,6 +52,7 @@ main {
 
 #banner {
   @extend %clear;
+  position: relative;
   height: 30rem;
   background: #166595 url("https://osf.io/static/img/front-page/bg-web.png") no-repeat center top;
   background-size: cover;
@@ -66,18 +67,20 @@ main {
     background-size: cover;
   }
 
-  #profile-name {
-    display: inline-block;
-    vertical-align: baseline;
-    padding-bottom: 10rem;
-    h1, h4 {
-      margin: 0;
-      color: white;
-    }
-  }
   & > h5 {
-    float: right;
-    margin: 6rem 4rem 0 0;
+    position: absolute;
+    top: 6rem;
+    right: 4rem;
+    color: white;
+  }
+}
+
+#profile-name {
+  display: inline-block;
+  vertical-align: baseline;
+  padding-bottom: 10rem;
+  h1, h4 {
+    margin: 0;
     color: white;
   }
 }
@@ -105,7 +108,7 @@ main {
   margin: 0;
   padding: 0;
   & > a {
-    display: inline-block;
+    display: block;
     background-color: $blue;
     line-height: 5rem;
     font-size: 2rem;
@@ -187,6 +190,8 @@ main {
   }
   textarea {
     min-height: 10rem;
+    max-height: 30rem;
+    resize: vertical;
   }
   input {
     font-size: inherit;

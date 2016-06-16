@@ -7,7 +7,7 @@
     {{/if}}
   </form>
 {{else}}
-  <span {{action "startEditing"}} title="Click to Edit">
+  <span {{action "startEditing"}} title="Click to edit {{if name name}}">
     {{#if text}}
       {{text}}
     {{else}}

@@ -9,36 +9,24 @@
     margin: 0;
     //min-height: 100vh;
   }
-  #menu-list {
-    .col-md-2 {
-      position: absolute;
-      height: 0;
-      width: 100%;
-      top: -5rem;
-    }
-    & > li {
-      a {
-        width: 100%;
-      }
-      & > h5, & > button {
-        display: none;
-        float: none;
-        position: absolute;
-        top: 50%;
-      }
+
+  #banner {
+    padding-top: 10rem;
+    &:before {
+      display: block;
+      margin: 0 auto 1rem;
     }
   }
-  #profile-picture-wrapper {
-    width: 50%;
-    max-width: 20rem;
-    margin: 0 auto;
+
+  #profile-name {
+    display: block;
+    h1, h4 {
+      margin: 0;
+      color: white;
+      text-align: center;
+    }
   }
-  #profile-picture {
-    margin-top: -100%;
-    width: 100%;
-    margin-left: 0;
-    border-width: 2px;
-  }
+
   main section {
     padding: 0 !important;
   }
