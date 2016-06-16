@@ -57,7 +57,6 @@
   }
   #collaborators-list {
     $item-height: 7rem;
-    max-height: none;
     img {
       width: $item-height;
     }
@@ -67,9 +66,6 @@
         line-height: $item-height / 3;
       }
     }
-  }
-  .activity-content {
-    max-height: none;
   }
 }
 
