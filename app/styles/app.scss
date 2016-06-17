@@ -416,6 +416,10 @@ main {
   }
 }
 
+.project-sort {
+  cursor: pointer;
+}
+
 #projects-list {
   $font-size: 2rem;
   .cp-Panel {

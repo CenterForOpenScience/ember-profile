@@ -6,7 +6,7 @@ export default CpPanelsComponent.extend({
   elementId: 'projects-list',
   accordion: true,
   sorted: Ember.computed.sort('model', 'sortDefinition'),
-  sortDefinition: ['name'],
+  sortDefinition: ['name:asc'],
   actions: {
     select(project) {
       this.get('onSelect')(project);
