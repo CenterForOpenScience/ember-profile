@@ -2,11 +2,11 @@
   <section class="full">
     <div class="profile-box">
       <header>
-        <h1 class="col-md-6 project-sort" onclick={{action 'projectSort' 'name'}}>Projects</h1>
-        <h2 class="col-md-2 project-sort" onclick={{action 'projectSort' 'attributes.created'}}>Date Created</h2>
-        <h2 class="col-md-2 project-sort" onclick={{action 'projectSort' 'attributes.modified'}}>Last Modified</h2>
-        <h2 class="col-md-1 project-sort" onclick={{action 'projectSort' 'stats.views'}}>Views</h2>
-        <h2 class="col-md-1.75 project-sort" onclick={{action 'projectSort' 'attributes.registered'}}>Registered</h2>
+        <h1 class="col-md-6 {{if (eq selected 'name') 'selected'}}" {{action 'projectSort' 'name' false}}>Projects</h1>
+        <h2 class="col-md-2 {{if (eq selected 'attributes.created') 'selected'}}" {{action 'projectSort' 'attributes.created' true}}>Date Created</h2>
+        <h2 class="col-md-2 {{if (eq selected 'attributes.modified') 'selected'}}" {{action 'projectSort' 'attributes.modified' true}}>Last Modified</h2>
+        <h2 class="col-md-1 {{if (eq selected 'stats.views') 'selected'}}" {{action 'projectSort' 'stats.views' true}}>Views</h2>
+        <h2 class="{{if (eq selected 'attributes.registered') 'selected'}}" {{action 'projectSort' 'attributes.registered' true}}>Registered</h2>
       </header>
       <div class="profile-content no-padding">
         {{#projects-list model=model sortDefinition=sort}}{{/projects-list}}

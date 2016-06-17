@@ -416,10 +416,6 @@ main {
   }
 }
 
-.project-sort {
-  cursor: pointer;
-}
-
 #projects-list {
   $font-size: 2rem;
   .cp-Panel {
@@ -543,6 +539,20 @@ main {
       &:active {
         background-color: darken($select, 10%);
       }
+    }
+  }
+}
+
+#profile-projects {
+  .profile-box header > * {
+    cursor: pointer;
+    transition: color 0.1s linear;
+    &:hover {
+      color: $select;
+    }
+    &.selected {
+      color: $select;
+      font-weight: bolder;
     }
   }
 }

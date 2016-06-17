@@ -2,16 +2,15 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 	sort: ['name:asc'],
+  selected: 'name',
 	actions: {
-		projectSort(sortBy) {
-      var sortVal;
-      if ((this.get('sort')[0].includes(sortBy + ":desc"))){
-        sortVal = sortBy + ":asc";
+		projectSort(sortBy, direction) {
+      let sortVal = ":asc";
+      if (this.get('sort')[0].indexOf(sortBy) === -1 && direction || this.get('sort')[0].indexOf(sortBy + ":asc") > -1) {
+        sortVal = ":desc";
       }
-      else {
-        sortVal = sortBy + ":desc";
-      }
-			this.set('sort', [sortVal]);
+      this.set('selected', sortBy);
+			this.set('sort', [sortBy + sortVal]);
 		}
 	}
 });
