@@ -9,39 +9,7 @@ export default Ember.Route.extend({
         join_date: '5-16-2016',
         email: 'PCRDTBDTRuH\\WD^RYX'
       },
-      social: [{
-        name: 'johnDoe45',
-        site: 'Twitter',
-        link: '/'
-      }, {
-        name: 'John Doe',
-        site: 'LinkedIn',
-        link: '/'
-      }, {
-        site: 'ORCID',
-        link: '/'
-      }, {
-        site: 'ResearcherID',
-        link: '/'
-      }, {
-        site: 'Github',
-        link: '/'
-      }, {
-        site: 'ImpactStory',
-        link: '/'
-      }, {
-        site: 'Google Scholar',
-        link: '/'
-      }, {
-        site: 'ResearchGate',
-        link: '/'
-      }, {
-        site: 'Academia',
-        link: '/'
-      }, {
-        site: 'Baidu Scholar',
-        link: '/'
-      }],
+      social: ['https:/www.twitter.com/johnDoe45', 'https://www.linkedin.com/johnTheDoe'],
       employment: [{
         name: 'Center for Open Science',
         title: 'Developer',
@@ -70,17 +38,26 @@ export default Ember.Route.extend({
 
   actions: {
     add(type) {
-      if (type === 'upload') {
-        Ember.$('#uploadModal').modal('show');
-      } else {
+      switch(type) {
+        case 'upload':
+          Ember.$('#uploadModal').modal('show');
+          break;
+        case 'social':
+          this.get(`currentModel.${type}`).pushObject('');
+          break;
+        default:
         this.get(`currentModel.${type}`).pushObject({});
-	    }
+      }
     },
     save(category, field, value) {
       this.set(`currentModel.${category}.${field}`, value);
     },
     saveItem(category, index, field, value) {
-      this.get(`currentModel.${category}`)[index][field] = value;
+      if (field === undefined) {
+        this.get(`currentModel.${category}`)[index] = value;
+      } else {
+        Ember.set(this.get(`currentModel.${category}`).objectAt(index), field, value);
+      }
     }
   }
 });

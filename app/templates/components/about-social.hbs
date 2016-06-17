@@ -1,5 +1,5 @@
-{{#each model as |social|}}
-  {{#if social.name}}
-    <a href="{{social.link}}" title="{{social.site}}">{{fa-icon (social-icon social.site) size=2}} {{social.name}}</a>
-  {{/if}}
+{{#each model as |link index|}}
+  {{#edit-field-social text=link tagName="a" callback=(route-action "saveItem" "social" index)}}{{/edit-field-social}}
+{{else}}
+  <p><i>There doesn't seem to be anything here.</i></p>
 {{/each}}
