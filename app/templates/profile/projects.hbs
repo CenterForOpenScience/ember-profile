@@ -9,7 +9,7 @@
         <h2 class="{{if (eq selected 'attributes.registered') 'selected'}}" {{action 'projectSort' 'attributes.registered' true}}>Registered</h2>
       </header>
       <div class="profile-content no-padding">
-        {{#projects-list model=model sortDefinition=sort}}{{/projects-list}}
+        {{#projects-list model=model.nodes sortDefinition=sort}}{{/projects-list}}
       </div>
     </div>
   </section>

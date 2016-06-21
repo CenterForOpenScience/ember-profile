@@ -2,10 +2,10 @@
   <div id="body-background">
     <div id="banner">
       <div id="profile-name">
-        {{#edit-field text=model.name tagName="h1" name="name"}}{{/edit-field}}
-        {{#edit-field text=model.description tagName="h4" name="description"}}{{/edit-field}}
+        {{#edit-field text=model.fullName tagName="h1" name="name"}}{{/edit-field}}
+        {{#edit-field text=(moment-format model.dateRegistered "M/d/YYYY") tagName="h4" name="description"}}{{/edit-field}}
       </div>
-	    <h5>Public Profile: osf.io/dskfb</h5>
+	    <h5>Public Profile: osf.io/{{model.id}}</h5>
     </div>
     <nav id="menu-list">
       {{#link-to "profile.about" class="col-md-3"}}About{{/link-to}}
