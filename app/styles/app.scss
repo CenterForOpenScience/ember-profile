@@ -357,6 +357,7 @@ main {
   .collab-text {
     display: inline-block;
     height: $item-height;
+    width: calc(100% - 12rem - 4px);
     h5 {
       font-weight: normal;
     }
@@ -366,6 +367,9 @@ main {
     h4, h5, ul {
       line-height: $item-height / 3;
       margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
   }
 
