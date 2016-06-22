@@ -1,13 +1,49 @@
 @import 'variables';
 @import 'mixins';
 
+// Toy phones
+@include media(xxs) {
+  #collaborators-list {
+    & > .collab-item {
+      padding: 1rem 1rem 0;
+      &:last-child {
+        padding-bottom: 1rem;
+      }
+    }
+    img {
+      margin-right: 1rem;
+    }
+    .collab-text {
+      width: calc(100vw - 10rem - 4px);
+    }
+  }
+}
+
+// Phones
+@include media(xs) {
+  #collaborators-list {
+    $item-height: 7rem;
+    img {
+      height: $item-height;
+      width: $item-height;
+    }
+    .collab-text {
+      width: calc(100% - 9rem - 4px);
+      height: $item-height;
+      h4, h5, ul {
+        line-height: $item-height / 3;
+      }
+    }
+  }
+}
+
+// Tablets
 @include media(sm) {
   #banner {
     height: 40rem;
   }
   #body-background {
     margin: 0;
-    //min-height: 100vh;
   }
 
   #banner {
@@ -55,21 +91,9 @@
       }
     }
   }
-  #collaborators-list {
-    $item-height: 7rem;
-    img {
-      height: $item-height;
-      width: $item-height;
-    }
-    .collab-text {
-      height: $item-height;
-      h4, h5, ul {
-        line-height: $item-height / 3;
-      }
-    }
-  }
 }
 
+// Small desktops
 @include media(md) {
   #body-background {
     width: 100vw;
@@ -89,6 +113,7 @@
   }
 }
 
+// 1080p+
 @include media(xl) {
   .collab-item {
     width: (100% / 3);
