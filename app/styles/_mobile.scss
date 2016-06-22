@@ -58,6 +58,7 @@
   #collaborators-list {
     $item-height: 7rem;
     img {
+      height: $item-height;
       width: $item-height;
     }
     .collab-text {
