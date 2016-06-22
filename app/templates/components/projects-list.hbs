@@ -24,12 +24,14 @@
       {{/if}}
     {{/cp-panel-toggle}}
     {{#cp-panel-body}}
-      {{#if project.public}}
+       {{#if project.public}}
         <!--<h1>Collaborators: {{project-collaborators project.contributors}}</h1>-->
         {{#if project.description}}
-          <article>
-            {{{project.description}}}
-          </article>
+          <a href="{{project.links.html}}">
+            <article>
+              {{{project.description}}}
+            </article>
+          </a>
         {{/if}}
       {{else}}
         <h1><i>This project is only visible to you. Make this project public to enable analytics.</i></h1>
