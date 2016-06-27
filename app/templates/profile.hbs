@@ -5,7 +5,7 @@
         {{#edit-field text=model.fullName tagName="h1" name="name"}}{{/edit-field}}
         {{#edit-field text=(moment-format model.dateRegistered "M/D/YYYY") tagName="h4" name="description"}}{{/edit-field}}
       </div>
-	    <h5>Public Profile: osf.io/{{model.id}}</h5>
+	    <h5>{{model.links.html}}</h5>
     </div>
     <nav id="menu-list">
       {{#link-to "profile.about" class="col-md-3"}}About{{/link-to}}
