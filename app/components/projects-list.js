@@ -7,15 +7,15 @@ export default CpPanelsComponent.extend({
   accordion: true,
   sorted: Ember.computed.sort('model', 'sortDefinition'),
   store: Ember.inject.service(),
-  projectCollaborators: {},
   didInsertElement() {
+    // Set project.collaborators to project.contributors(each.user.fullName)
     this.get('store').find('user', 'd94fu').then(me =>
       this.get('model').forEach(node => {
-        this.get('projectCollaborators')[node] = [];
+        node.set('collaborators', []);
         node.get('contributors').then(contributors =>
           contributors.forEach(contributor =>
             contributor.get('users').then(user =>
-              me === user ? '' : this.get('projectCollaborators')[node].pushObject(user.get('fullName'))
+              me === user ? '' : node.get('collaborators').pushObject(user.get('fullName'))
             )));
       }));
   }
