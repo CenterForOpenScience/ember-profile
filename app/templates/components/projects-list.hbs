@@ -25,7 +25,7 @@
     {{/cp-panel-toggle}}
     {{#cp-panel-body}}
        {{#if project.public}}
-        <!--<h1>Collaborators: {{project-collaborators project.contributors}}</h1>-->
+        <h1>Collaborators: {{project-collaborators project projectCollaborators}}</h1>
         {{#if project.description}}
           <a href="{{project.links.html}}">
             <article>
