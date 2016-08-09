@@ -7,7 +7,8 @@ module.exports = function (defaults) {
         // Add options here
         sassOptions: {
             includePaths: [
-                'bower_components/bootstrap-sass/assets'
+                'node_modules/ember-osf/addon/styles',
+                'bower_components/bootstrap-sass/assets/stylesheets',
             ]
         },
         autoprefixer: {
