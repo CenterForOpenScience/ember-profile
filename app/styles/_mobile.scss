@@ -3,119 +3,119 @@
 
 // Toy phones
 @include media(xxs) {
-  #collaborators-list {
-    & > .collab-item {
-      padding: 1rem 1rem 0;
-      &:last-child {
-        padding-bottom: 1rem;
-      }
+    #collaborators-list {
+        & > .collab-item {
+            padding: 1rem 1rem 0;
+            &:last-child {
+                padding-bottom: 1rem;
+            }
+        }
+        img {
+            margin-right: 1rem;
+        }
+        .collab-text {
+            width: calc(100vw - 10rem - 4px);
+        }
     }
-    img {
-      margin-right: 1rem;
-    }
-    .collab-text {
-      width: calc(100vw - 10rem - 4px);
-    }
-  }
 }
 
 // Phones
 @include media(xs) {
-  #collaborators-list {
-    $item-height: 7rem;
-    img {
-      height: $item-height;
-      width: $item-height;
+    #collaborators-list {
+        $item-height: 7rem;
+        img {
+            height: $item-height;
+            width: $item-height;
+        }
+        .collab-text {
+            width: calc(100% - 9rem - 4px);
+            height: $item-height;
+            h4, h5, ul {
+                line-height: $item-height / 3;
+            }
+        }
     }
-    .collab-text {
-      width: calc(100% - 9rem - 4px);
-      height: $item-height;
-      h4, h5, ul {
-        line-height: $item-height / 3;
-      }
-    }
-  }
 }
 
 // Tablets
 @include media(sm) {
-  #banner {
-    height: 40rem;
-  }
-  #body-background {
-    margin: 0;
-  }
+    #banner {
+        height: 40rem;
+    }
+    #body-background {
+        margin: 0;
+    }
 
-  #banner {
-    padding-top: 10rem;
-    &:before {
-      display: block;
-      margin: 0 auto 1rem;
+    #banner {
+        padding-top: 10rem;
+        &:before {
+            display: block;
+            margin: 0 auto 1rem;
+        }
     }
-  }
 
-  #profile-name {
-    display: block;
-    h1, h4 {
-      margin: 0;
-      color: white;
-      text-align: center;
+    #profile-name {
+        display: block;
+        h1, h4 {
+            margin: 0;
+            color: white;
+            text-align: center;
+        }
     }
-  }
 
-  main section {
-    padding: 0 !important;
-  }
-  .profile-box {
-    border-style: solid none;
-    margin-bottom: 2rem;
-    &:last-child {
-      margin-bottom: 0;
-      border-bottom: none;
+    main section {
+        padding: 0 !important;
     }
-  }
-  #profile-projects .profile-box {
-    header h2, header .fa {
-      display: none;
+    .profile-box {
+        border-style: solid none;
+        margin-bottom: 2rem;
+        &:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+        }
     }
-  }
-  #projects-list {
-    .cp-Panel-toggle {
-      h2, & > .fa, & > button {
-        display: none;
-      }
+    #profile-projects .profile-box {
+        header h2, header .fa {
+            display: none;
+        }
     }
-    .cp-Panel-body-inner {
-      & h1 i {
-        white-space: normal;
-      }
+    #projects-list {
+        .cp-Panel-toggle {
+            h2, & > .fa, & > button {
+                display: none;
+            }
+        }
+        .cp-Panel-body-inner {
+            & h1 i {
+                white-space: normal;
+            }
+        }
     }
-  }
 }
 
 // Small desktops
 @include media(md) {
-  #body-background {
-    width: 100vw;
-  }
+    #body-background {
+        width: 100vw;
+    }
 
-  #body-wrapper {
-    padding-bottom: 0;
-    background: none;
-  }
+    #body-wrapper {
+        padding-bottom: 0;
+        background: none;
+    }
 
-  #body-background {
-    min-height: 0;
-  }
+    #body-background {
+        min-height: 0;
+    }
 
-  .projects-panel {
-    height: inherit;
-  }
+    .projects-panel {
+        height: inherit;
+    }
 }
 
 // 1080p+
 @include media(xl) {
-  .collab-item {
-    width: (100% / 3);
-  }
+    .collab-item {
+        width: (100% / 3);
+    }
 }

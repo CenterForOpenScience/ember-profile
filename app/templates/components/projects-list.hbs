@@ -1,41 +1,41 @@
 {{#each sorted as |project|}}
-  {{#cp-panel class=(if project.private 'private')}}
-    {{#cp-panel-toggle}}
-      <h1 class="{{if project.private 'col-md-10' 'col-md-6'}}">
-        {{#if project.public}}
-          {{fa-icon "chevron-down"}}
-        {{else}}
-          {{fa-icon "warning"}}
-        {{/if}}
-        <b>{{project.title}}</b>
-      </h1>
-      {{#if project.public}}
-        <h2 class="col-md-2">{{moment-format project.dateCreated "M/D/YYYY"}}</h2>
-        <h2 class="col-md-2">{{moment-format project.dateModified "M/D/YYYY"}}</h2>
-        <h2 class="col-md-1">{{project.stats.views}}</h2>
-        {{#if project.registration}}
-          {{fa-icon "check" class="col-md-1"}}
-        {{/if}}
-      {{else}}
-        <button class="btn btn-default col-md-2">Make Public</button>
-        {{#if project.registration}}
-          {{fa-icon "check" class="col-md-1"}}
-        {{/if}}
-      {{/if}}
-    {{/cp-panel-toggle}}
-    {{#cp-panel-body}}
-       {{#if project.public}}
-        <h1>Collaborators: {{project-collaborators project.collaborators}}</h1>
-        {{#if project.description}}
-          <a href="{{project.links.html}}">
-            <article>
-              {{{project.description}}}
-            </article>
-          </a>
-        {{/if}}
-      {{else}}
-        <h1><i>This project is only visible to you. Make this project public to enable analytics.</i></h1>
-      {{/if}}
-    {{/cp-panel-body}}
-  {{/cp-panel}}
+    {{#cp-panel class=(if project.private 'private')}}
+        {{#cp-panel-toggle}}
+            <h1 class="{{if project.private 'col-md-10' 'col-md-6'}}">
+                {{#if project.public}}
+                    {{fa-icon "chevron-down"}}
+                {{else}}
+                    {{fa-icon "warning"}}
+                {{/if}}
+                <b>{{project.title}}</b>
+            </h1>
+            {{#if project.public}}
+                <h2 class="col-md-2">{{moment-format project.dateCreated "M/D/YYYY"}}</h2>
+                <h2 class="col-md-2">{{moment-format project.dateModified "M/D/YYYY"}}</h2>
+                <h2 class="col-md-1">{{project.stats.views}}</h2>
+                {{#if project.registration}}
+                    {{fa-icon "check" class="col-md-1"}}
+                {{/if}}
+            {{else}}
+                <button class="btn btn-default col-md-2">Make Public</button>
+                {{#if project.registration}}
+                    {{fa-icon "check" class="col-md-1"}}
+                {{/if}}
+            {{/if}}
+        {{/cp-panel-toggle}}
+        {{#cp-panel-body}}
+            {{#if project.public}}
+                <h1>Collaborators: {{project-collaborators project.collaborators}}</h1>
+                {{#if project.description}}
+                    <a href="{{project.links.html}}">
+                        <article>
+                            {{{project.description}}}
+                        </article>
+                    </a>
+                {{/if}}
+            {{else}}
+                <h1><i>This project is only visible to you. Make this project public to enable analytics.</i></h1>
+            {{/if}}
+        {{/cp-panel-body}}
+    {{/cp-panel}}
 {{/each}}

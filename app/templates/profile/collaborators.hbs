@@ -1,18 +1,18 @@
 <main id="profile-collaborators">
-  <section class="full">
-    <div class="profile-box">
-      <header>
-        <h1>Collaborators</h1>
-        <select id="collab-filters" onchange={{action 'filter'}}>
-          <option value="projects:desc">Projects</option>
-          <option value="familyName">Name</option>
-          <option value="dateRegistered">Location</option>
-        </select>
-        <label for="collab-filters">Sort by</label>
-      </header>
-      <div class="profile-content no-padding">
-        {{#collaborators-list model=model sortDefinition=sort}}{{/collaborators-list}}
-      </div>
-    </div>
-  </section>
+    <section class="full">
+        <div class="profile-box">
+            <header>
+                <h1>Collaborators</h1>
+                <select id="collab-filters" onchange={{action 'filter'}}>
+                    <option value="projects:desc">Projects</option>
+                    <option value="familyName">Name</option>
+                    <option value="dateRegistered">Location</option>
+                </select>
+                <label for="collab-filters">Sort by</label>
+            </header>
+            <div class="profile-content no-padding">
+                {{#collaborators-list model=model sortDefinition=sort}}{{/collaborators-list}}
+            </div>
+        </div>
+    </section>
 </main>

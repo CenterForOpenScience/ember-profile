@@ -1,18 +1,18 @@
 <div id="body-wrapper">
-  <div id="body-background">
-    <div id="banner">
-      <div id="profile-name">
-        {{#edit-field text=model.fullName tagName="h1" name="name"}}{{/edit-field}}
-        {{#edit-field text=(moment-format model.dateRegistered "M/D/YYYY") tagName="h4" name="description"}}{{/edit-field}}
-      </div>
-	    <h5>{{model.links.html}}</h5>
+    <div id="body-background">
+        <div id="banner">
+            <div id="profile-name">
+                {{#edit-field text=model.fullName tagName="h1" name="name"}}{{/edit-field}}
+                {{#edit-field text=(moment-format model.dateRegistered "M/D/YYYY") tagName="h4" name="description"}}{{/edit-field}}
+            </div>
+            <h5>{{model.links.html}}</h5>
+        </div>
+        <nav id="menu-list">
+            {{#link-to "profile.about" class="col-md-3"}}About{{/link-to}}
+            {{#link-to "profile.projects" class="col-md-3"}}Projects{{/link-to}}
+            {{#link-to "profile.collaborators" class="col-md-3"}}Collaborators{{/link-to}}
+            {{#link-to "profile.activity" class="col-md-3"}}Activity{{/link-to}}
+        </nav>
+        {{outlet}}
     </div>
-    <nav id="menu-list">
-      {{#link-to "profile.about" class="col-md-3"}}About{{/link-to}}
-      {{#link-to "profile.projects" class="col-md-3"}}Projects{{/link-to}}
-      {{#link-to "profile.collaborators" class="col-md-3"}}Collaborators{{/link-to}}
-      {{#link-to "profile.activity" class="col-md-3"}}Activity{{/link-to}}
-    </nav>
-    {{outlet}}
-  </div>
 </div>

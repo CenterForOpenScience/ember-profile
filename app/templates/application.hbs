@@ -1,48 +1,49 @@
 <nav class="navbar navbar-inverse navbar-fixed-top" id="navbarScope" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-              aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand hidden-sm hidden-xs" href="https://osf.io/"><img src="https://osf.io/static/img/cos-white2.png"
-                                                                class="osf-navbar-logo" width="27" alt="COS logo">
-        Open Science Framework</a>
-      <a class="navbar-brand visible-sm visible-xs" href="/"><img src="https://osf.io/static/img/cos-white2.png"
-                                                                  class="osf-navbar-logo" width="27"
-                                                                  alt="COS logo"> OSF</a>
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand hidden-sm hidden-xs" href="https://osf.io/"><img
+                    src="https://osf.io/static/img/cos-white2.png"
+                    class="osf-navbar-logo" width="27" alt="COS logo">
+                Open Science Framework</a>
+            <a class="navbar-brand visible-sm visible-xs" href="/"><img src="https://osf.io/static/img/cos-white2.png"
+                                                                        class="osf-navbar-logo" width="27"
+                                                                        alt="COS logo"> OSF</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse navbar-right">
+            <ul class="nav navbar-nav">
+                <li id="osfNavDashboard"><a>Dashboard</a></li>
+                <li id="osfNavMyProjects"><a href="/profile/projects">My Projects</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Browse
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a>New Projects</a></li>
+                        <li><a>Registry</a></li>
+                        <li><a>Meetings</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle nav-user-dropdown" data-toggle="dropdown" role="button"
+                       aria-expanded="false"><span class="osf-gravatar"><img
+                            src="https://secure.gravatar.com/avatar/119ccf7175af9a2d1a103b8126667068?d=identicon&s=25"
+                            alt="User gravatar"> </span> John Doe <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>{{#link-to "profile.about"}}{{fa-icon "user" size="lg"}} My Profile{{/link-to}}</li>
+                        <li><a>{{fa-icon "life-ring" size="lg"}} Support</a></li>
+                        <li><a>{{fa-icon "cog" size="lg"}} Settings</a></li>
+                        <li><a>{{fa-icon "sign-out" size="lg"}} Log out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.navbar-collapse -->
     </div>
-    <div id="navbar" class="navbar-collapse collapse navbar-right">
-      <ul class="nav navbar-nav">
-        <li id="osfNavDashboard"><a>Dashboard</a></li>
-        <li id="osfNavMyProjects"><a href="/profile/projects">My Projects</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Browse
-            <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a>New Projects</a></li>
-            <li><a>Registry</a></li>
-            <li><a>Meetings</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle nav-user-dropdown" data-toggle="dropdown" role="button"
-             aria-expanded="false"><span class="osf-gravatar"><img
-              src="https://secure.gravatar.com/avatar/119ccf7175af9a2d1a103b8126667068?d=identicon&s=25"
-              alt="User gravatar"> </span> John Doe <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li>{{#link-to "profile.about"}}{{fa-icon "user" size="lg"}} My Profile{{/link-to}}</li>
-            <li><a>{{fa-icon "life-ring" size="lg"}} Support</a></li>
-            <li><a>{{fa-icon "cog" size="lg"}} Settings</a></li>
-            <li><a>{{fa-icon "sign-out" size="lg"}} Log out</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!--/.navbar-collapse -->
-  </div>
 
 
 </nav>
@@ -50,38 +51,38 @@
 {{outlet}}
 
 <footer>
-  <div class="col-sm-2 col-md-3 col-md-offset-1">
-    <h4>OSF</h4>
-    <ul>
-      <li>Explore</li>
-      <li>Contact</li>
-      <li>Help/Support</li>
-      <li>Guides</li>
-      <li>FAQ</li>
-    </ul>
-  </div>
-  <div class="col-sm-5 col-md-4">
-    <h4>Center for Open Science</h4>
-    <ul>
-      <li>Home</li>
-      <li>Reproducibility Project: Psychology</li>
-      <li>Reproducibility Project: Cancer Biology</li>
-      <li>TOP Guidelines</li>
-      <li>Donate</li>
-    </ul>
-  </div>
-  <div class="col-sm-4 col-md-3">
-    <h4>Socialize</h4>
-    {{fa-icon "twitter" size=2}}
-    {{fa-icon "facebook" size=2}}
-    {{fa-icon "group" size=2}}
-    {{fa-icon "github" size=2}}
-    {{fa-icon "google-plus" size=2}}
-  </div> <!-- column -->
+    <div class="col-sm-2 col-md-3 col-md-offset-1">
+        <h4>OSF</h4>
+        <ul>
+            <li>Explore</li>
+            <li>Contact</li>
+            <li>Help/Support</li>
+            <li>Guides</li>
+            <li>FAQ</li>
+        </ul>
+    </div>
+    <div class="col-sm-5 col-md-4">
+        <h4>Center for Open Science</h4>
+        <ul>
+            <li>Home</li>
+            <li>Reproducibility Project: Psychology</li>
+            <li>Reproducibility Project: Cancer Biology</li>
+            <li>TOP Guidelines</li>
+            <li>Donate</li>
+        </ul>
+    </div>
+    <div class="col-sm-4 col-md-3">
+        <h4>Socialize</h4>
+        {{fa-icon "twitter" size=2}}
+        {{fa-icon "facebook" size=2}}
+        {{fa-icon "group" size=2}}
+        {{fa-icon "github" size=2}}
+        {{fa-icon "google-plus" size=2}}
+    </div> <!-- column -->
 </footer>
 
 <div id="copyright">
-  Copyright © 2011-2016 Center for Open Science |
+    Copyright © 2011-2016 Center for Open Science |
     Terms of Use |
     Privacy Policy
 </div>

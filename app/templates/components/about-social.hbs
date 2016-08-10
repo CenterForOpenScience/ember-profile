@@ -1,5 +1,5 @@
 {{#each model as |link index|}}
-  {{#edit-field-social text=link tagName="a" callback=(route-action "saveItem" "social" index)}}{{/edit-field-social}}
+    {{#edit-field-social text=link tagName="a" callback=(route-action "saveItem" "social" index)}}{{/edit-field-social}}
 {{else}}
-  <p><i>There doesn't seem to be anything here.</i></p>
+    <p><i>There doesn't seem to be anything here.</i></p>
 {{/each}}

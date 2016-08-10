@@ -1,16 +1,16 @@
 {{#if isEditing}}
-  <a href="{{text}}" target="_blank">{{fa-icon (social-icon text) size=2}}</a>
-	<form class="inline" {{action "submit" on="submit"}}>
-    {{input class="form-control" value=text autofocus=true placeholder="Paste social link here"}}
-	</form>
-{{else}}
-  {{#if text}}
     <a href="{{text}}" target="_blank">{{fa-icon (social-icon text) size=2}}</a>
-    <span {{action "startEditing"}} title="Click to edit link">{{social-username text}}</span>
-  {{else}}
-	  {{fa-icon (social-icon text) size=2 click=(action "startEditing")}}
-    <span {{action "startEditing"}} title="Click to edit link">
+    <form class="inline" {{action "submit" on="submit"}}>
+        {{input class="form-control" value=text autofocus=true placeholder="Paste social link here"}}
+    </form>
+{{else}}
+    {{#if text}}
+        <a href="{{text}}" target="_blank">{{fa-icon (social-icon text) size=2}}</a>
+        <span {{action "startEditing"}} title="Click to edit link">{{social-username text}}</span>
+    {{else}}
+        {{fa-icon (social-icon text) size=2 click=(action "startEditing")}}
+        <span {{action "startEditing"}} title="Click to edit link">
       <i>Click to edit social link</i>
     </span>
-  {{/if}}
+    {{/if}}
 {{/if}}

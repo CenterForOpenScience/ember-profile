@@ -1,12 +1,12 @@
-import { moduleForModel, test } from 'ember-qunit';
+import {moduleForModel, test} from "ember-qunit";
 
 moduleForModel('projects-data', 'Unit | Model | projects data', {
-  // Specify the other units that are required for this test.
-  needs: []
+    // Specify the other units that are required for this test.
+    needs: []
 });
 
-test('it exists', function(assert) {
-  let model = this.subject();
-  // let store = this.store();
-  assert.ok(!!model);
+test('it exists', function (assert) {
+    let model = this.subject();
+    // let store = this.store();
+    assert.ok(!!model);
 });
