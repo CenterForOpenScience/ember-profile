@@ -1,7 +1,6 @@
-# Ember-profile
+# Ember Profile
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This repo is a rework of the OSF profile page in Ember.js
 
 ## Prerequisites
 
@@ -15,10 +14,14 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
+
+## Configuration
+
+To communicate with the OSF, configure your `config/local.yml` as done in `ember-osf`.
 
 ## Running / Development
 
