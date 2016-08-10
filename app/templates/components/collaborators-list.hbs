@@ -1,9 +1,9 @@
 {{#each sorted as |collaborator|}}
   <li class="collab-item col-sm-6">
-    <img src={{collaborator.img}}>
+    <img src={{collaborator.links.profile_image}}>
     <div class="collab-text">
-      <h4>{{collaborator.firstName}} {{collaborator.lastName}}<span class="small-text"> ({{pluralize collaborator.projects "Project"}})</span></h4>
-      <h5>{{collaborator.location}} | {{collaborator.title}}</h5>
+      <h4>{{collaborator.givenName}} {{collaborator.familyName}}<span class="small-text"> ({{pluralize collaborator.projects "Project"}})</span></h4>
+      <h5>{{moment-format collaborator.dateRegistered "M/D/YYYY"}} | {{collaborator.title}}</h5>
       <ul class="list-inline">
         {{fa-icon "fa-globe" tagName="li" title="Personal Website"}}
         {{fa-icon "fa-twitter" tagName="li" title="Twitter"}}

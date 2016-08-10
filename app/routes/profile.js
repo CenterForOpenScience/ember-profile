@@ -2,9 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return {
-      name: 'John Doe',
-      description: 'Developer at Charlottesville VA'
-    };
+    // console.log(this.store.findRecord('user', 'd94fu'));
+    // return {
+    //   name: 'John Doe',
+    //   description: 'Developer at Charlottesville VA'
+    // };
+    return this.store.findRecord('user', 'd94fu');
   }
 });
